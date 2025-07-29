@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+
+
+
+
+/* system font stack for fast, native UI feel */
+body {
+  font-family: -apple-system, BlinkMacSystemFont,Forma DJR UI "Segoe UI", Roboto, "Helvetica Neue",
+               Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+               "Noto Color Emoji";
+  color: #1a1a1a;
+  background-color: #ffffff;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+     
+}
+
+/* Utility classes for reusability */
+.hp-text {
+  color: #1a1a1a;
+}
+
+.hp-blue {
+  color: #0076ce;
+}
+
+.hp-bg-blue {
+  background-color: #0076ce;
+}
+
+.hp-bg-grey {
+  background-color: #f5f5f5;
+}
+
+.hp-btn {
+  @apply text-white py-2 px-4 rounded font-medium;
+  background-color: #0076ce;
+}
+
+.hp-btn:hover {
+  background-color: #005ea2; 
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 3px;
+}
