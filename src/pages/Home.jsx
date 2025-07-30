@@ -19,8 +19,8 @@ export default function Home() {
 
         {/* card section  */}
         <div className="flex flex-col sm:flex-row p-5 sm:p-0 items-center justify-center gap-10">
-          <div class="bg-white dark:bg-gray-800 flex  items-center cursor-pointer">
-            <div class="border  dark:bg-gray-700 dark:text-gray-300">
+          <div class="bg-white flex  items-center cursor-pointer">
+            <div class="border ">
               <div class="overflow-hidden">
                 <img
                   src="/src/assets/images/SWD_Tile.avif"
@@ -37,8 +37,8 @@ export default function Home() {
             </div>
           </div>
 
-          <div class="bg-white dark:bg-gray-800 flex  items-center cursor-pointer">
-            <div class="border  dark:bg-gray-700 dark:text-gray-300">
+          <div class="bg-white  flex  items-center cursor-pointer">
+            <div class="border ">
               <div class="overflow-hidden">
                 <img
                   src="/src/assets/images/Printer_new.avif"
@@ -55,8 +55,8 @@ export default function Home() {
             </div>
           </div>
 
-          <div class="bg-white dark:bg-gray-800 flex  items-center cursor-pointer">
-            <div class="border  dark:bg-gray-700 dark:text-gray-300">
+          <div onClick={() =>navigate('/ComputerSupport')} class="bg-white flex  items-center cursor-pointer">
+            <div class="border">
               <div class="overflow-hidden">
                 <img
                   src="/src/assets/images/computer_new.avif"
