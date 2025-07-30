@@ -5,6 +5,8 @@ import Envy from "../pages/products/Envy";
 import Pavilion from "../pages/products/Pavilion";
 import Chromebooks from "../pages/products/chromebooks";
 import PrinterHelp from "../pages/PrinterHelp";
+import ContactAgent from "../pages/ContactAgent";
+import SoftwareDrivers from "../pages/SoftwareDrivers";
 export default function AppRoutes() {
   return (
   
@@ -16,6 +18,8 @@ export default function AppRoutes() {
         <Route path="/products/pavilion" element={<Pavilion />} />
         <Route path="/products/chromebooks" element={<Chromebooks />} />
         <Route path="/PrinterHelp" element={<PrinterHelp />} />
+        <Route path="/contact" element={<ContactAgent/>}/>
+        <Route path="/Softwaredrivers" element={<SoftwareDrivers/>}/>
       </Routes>
  
   );

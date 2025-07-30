@@ -17,9 +17,10 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-black text-white text-[15px] font-sans py-5 border-gray-200 mt-10">
+    <footer className="bg-black  text-white text-[15px] font-sans py-5 border-gray-200 mt-10">
+     <div className="container">
       {/* Country Selector */}
-      <div className="container mx-auto px-4 sm:px-0  w-full flex items-center space-x-3 pb-3">
+      <div className=" px-4 sm:px-0  w-full flex items-center space-x-3 pb-3">
         <span className="font-semibold">Country/Region:</span>
         <a href="#" className="flex items-center space-x-2 hover:underline">
           <img src="/src/assets/images/india.webp" alt="India" className="w-5 h-4" />
@@ -103,6 +104,7 @@ const Footer = () => {
           ©2025 HP Development Company, L.P. The information contained herein is subject to change without notice.
         </p>
       </div>
+     </div>
     </footer>
   );
 };

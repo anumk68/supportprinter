@@ -158,14 +158,14 @@ export default function SupportNav() {
   };
 
   return (
-    <nav className="bg-black text-white text-[17px]">
+    <nav className="bg-black text-white text-[15px]">
       {/* Desktop Nav */}
       <ul className="hidden sm:flex items-center justify-center gap-6 px-6 relative">
         <li>
           <Link
-            to="/support-home"
+            to="/"
             className={`pb-3 ${
-              isActive("/support-home") ? "border-b-4 border-[#e0e0e0]" : ""
+              isActive("/") ? "border-b-4 border-[#e0e0e0]" : ""
             }`}
           >
             Support Home

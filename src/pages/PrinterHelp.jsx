@@ -151,7 +151,7 @@ export default function PrinterHelp() {
 <div className="relative w-full  mx-auto flex flex-col items-center px-4 sm:px-40 py-7 sm:py-28">
     <p className="font-[HPSimplified] text-[22px] leading-[1.4] tracking-[0.3px] mb-1.5">Search our support articles</p>
   
-  <div className="relative w-1/2 text-center">
+  <div className="relative w-full  sm:w-1/2 text-center">
   <input type="search" id="location-search" class="block text-center p-2.5 w-full z-20  text-gray-900 bg-gray-50 rounded-e-lg  text-xl  border dark:bg-gray-700 dark:border-s-gray-700  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white " placeholder="What can I help with you?" required />
 <button type="submit" class="absolute top-0 cursor-pointer end-0 h-full p-4 text-sm font-medium text-white bg-[#ccc]  border-l border-black hover:bg-[#b9b9b9]  ">
               

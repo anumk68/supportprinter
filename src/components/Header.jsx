@@ -167,13 +167,13 @@ export default function Header() {
   return (
     <header className="w-full font-[Segoe UI] text-[#1a1a1a] relative z-50">
       {/* Top Header */}
-      <div className="container mx-auto flex items-center justify-between px-4 sm:px-8 py-4 border-b border-gray-200 bg-white">
+      <div className="container  flex items-center justify-between px-4 sm:px-8 py-4 border-b border-gray-200 bg-white">
         <div className="flex items-center gap-6 relative">
           <Link to="/">
             <img
               src="/src/assets/images/HP_logo.svg"
               alt="HP Logo"
-              className="h-10 sm:h-[60px] cursor-pointer"
+              className="h-10 sm:h-[50px] cursor-pointer"
             />
           </Link>
 
