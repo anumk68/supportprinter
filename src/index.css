@@ -58,4 +58,8 @@ body {
 
 
 
-
+@media (max-width:768px){
+  h1.text-\[32px\].font-medium.md\:text-2xl.text-black.font-\[HPSimplifiedLight\]{
+    font-size: 18px;
+  }
+}

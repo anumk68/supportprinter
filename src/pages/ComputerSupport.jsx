@@ -1,14 +1,8 @@
 
 import React, { useEffect, useState } from "react";
 import {
-  Download,
-  FolderClock,
-  Headset,
-  BotMessageSquare,
-  Search,
-  CircleUserRound,
-  ChevronLeft,
-  ChevronRight,
+  Download,FolderClock, Headset, BotMessageSquare, Search,
+ CircleUserRound, ChevronLeft, ChevronRight,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -57,7 +51,7 @@ const ComputerSupport = () => {
       <div className="bg-[url('/src/assets/images/Computer_banner_optimized.avif')] bg-contain bg-no-repeat border-b border-[#cccccc] bg-right bg-center">
         <div className="container mx-auto flex items-center justify-between px-4 md:px-10 py-4 h-[168px]">
           <div className="w-full md:w-1/2 text-left">
-            <h1 className="text-[32px] font-medium md:text-2xl text-black font-[HPSimplifiedLight]">
+            <h1 className="text-[32px] text-[18px] md:text-[32px]  font-medium md:text-2xl text-black font-[HPSimplifiedLight]">
               HP Computer Support
             </h1>
           </div>
@@ -68,7 +62,7 @@ const ComputerSupport = () => {
       {/* 2nd section */}
 
       <div className="container px-4 py-2 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-center border-b border-[#cccccc] ">
-        <div className="flex flex-col items-center space-y-2 px-4 py-4 border-r border-[#cccccc]">
+        <div className="flex flex-col items-center space-y-2 px-4 py-4 sm:border-r border-[#cccccc]">
           <Download className="text-gray-500 text-5xl" />
           <Link
             to="/redirect"
@@ -78,7 +72,7 @@ const ComputerSupport = () => {
           </Link>
         </div>
 
-        <div className="flex flex-col items-center space-y-2 px-4 py-4 border-r border-[#cccccc]">
+        <div className="flex flex-col items-center space-y-2 px-4 py-4 lg:border-r border-[#cccccc]">
           <FolderClock className="text-gray-500 text-5xl" />
           <Link
             to="/redirect"
@@ -88,7 +82,7 @@ const ComputerSupport = () => {
           </Link>
         </div>
 
-        <div className="flex flex-col items-center space-y-2 px-4 py-4 border-r border-[#cccccc]">
+        <div className="flex flex-col items-center space-y-2 px-4 py-4 sm:border-r border-[#cccccc]">
           <Headset className="text-gray-500 text-5xl" />
           <Link
             to="/redirect"
@@ -109,8 +103,10 @@ const ComputerSupport = () => {
         </div>
       </div>
 
+      
+
       {/* 3rd section */}
-      <div className="container mx-auto flex flex-col lg:flex-row items-center gap-10 py-5 border-b  border-[#cccccc]">
+      {/* <div className="container mx-auto flex flex-col lg:flex-row items-center gap-10 py-5 border-b  border-[#cccccc]">
         <div className="w-full lg:w-1/2">
           <img
             className="w-full h-auto max-h-80 object-contain mx-auto"
@@ -122,7 +118,7 @@ const ComputerSupport = () => {
           <h3 className="text-[28px] md:text-2xl leading-snug font-[HPSimplifiedLight]">
            Thinking of upgrading to Windows 11?
           </h3>
-          <p className="md:text-md text-gray-700 ">
+          <p className=" text-sm sm:text-base md:text-lg text-gray-700 ">
             Before you do, you’ll need to see if your PC can run Windows 11. Some computers may have components that do not meet the Windows 11 minimum hardware requirements. Be sure to read the Windows 11 Upgrade Guide (see links below) for more information.
           </p>
           <button className="bg-[#114284] text-white px-5 py-2 rounded-xl text-base font-medium">
@@ -145,7 +141,53 @@ const ComputerSupport = () => {
             Need Windows 10 Support? <ChevronRight className="inline-block" />
           </Link>
         </div>
-      </div>
+      </div> */}
+
+      <div className="container mx-auto px-4 py-8 flex flex-col lg:flex-row items-center gap-8 lg:gap-12 border-b border-[#cccccc]">
+  {/* Image Section */}
+  <div className="w-full lg:w-1/2">
+    <img
+      src="/src/assets/images/Computer_feature.webp"
+      alt="Printer Setup"
+      className="w-full h-auto max-h-72 sm:max-h-80 md:max-h-[22rem] object-contain mx-auto"
+    />
+  </div>
+
+  {/* Text Section */}
+  <div className="w-full lg:w-1/2 text-center lg:text-left space-y-4">
+    <h3 className="text-xl sm:text-2xl md:text-3xl font-[HPSimplifiedLight] leading-snug">
+      Thinking of upgrading to Windows 11?
+    </h3>
+
+    <p className="text-sm sm:text-base md:text-lg text-gray-700">
+      Before you do, you’ll need to see if your PC can run Windows 11. Some computers may have components that do not meet the Windows 11 minimum hardware requirements. Be sure to read the Windows 11 Upgrade Guide (see links below) for more information.
+    </p>
+
+    <button className="bg-[#114284] text-white px-6 py-2 rounded-xl text-sm sm:text-base font-medium">
+      Windows 11 Support
+    </button>
+
+    <h5 className="text-sm text-gray-800 font-medium">
+      More support options for this topic
+    </h5>
+
+    <Link
+      to="/redirect"
+      className="block text-blue-500 hover:underline text-sm sm:text-base"
+    >
+      More support information around Windows 11{" "}
+      <ChevronRight className="inline-block" />
+    </Link>
+
+    <Link
+      to="/redirect"
+      className="block text-blue-500 hover:underline text-sm sm:text-base"
+    >
+      Need Windows 10 Support? <ChevronRight className="inline-block" />
+    </Link>
+  </div>
+</div>
+
     
 
       {/* 4th section */}
@@ -262,26 +304,38 @@ const ComputerSupport = () => {
 
       {/* 5th section */}
 
-     <div className=" bg-gray-50 py-12 px-6">
+     {/* <div className=" bg-gray-50 py-12 px-6">
            <div className="container mx-auto flex">
                <img
-                src="/images/identify_product_all.svg"
+                src="/src/assets/images/identify_product_all.svg"
                 alt="Magnifier Icon"
                 className="w-20 h-20 object-cover"
               />
-            <h2 className="text-2xl mx-5 font-semibold text-gray-800 leading-tight">
+            <h2 className="text-2xl mx-20 font-light text-gray-800 leading-tight">
               Identify your printer for manuals and
               <br className="hidden md:block" />
               specific product information
             </h2>
            </div>
       <div className="w-full container mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
-        <div className=" mx-25">
-        <p className="text-gray-700 mb-2">
-            Enter your serial number, product number or product name
+        <div className="w-100 ml-40">
+          <div className="mt-3 flex flex-col sm:flex-row sm:items-center sm:gap-4">
+            <button className="bg-blue-600 text-white border border-blue-600 px-4 py-1 rounded-md hover:bg-blue-50 transition">
+              Let HP detect your product
+            </button>
+            <Link
+              to="/redirect"
+              className="text-blue-500 text-sm hover:underline mt-2 sm:mt-0"
+            >
+              Find out more <ChevronRight className="inline-block" />
+            </Link>
+          </div>
+
+        <p className="text-gray-700 mt-6">
+            Or, enter your serial number, product number or product name
           </p>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 mt-5">
             <input
               type="text"
               placeholder="Example: HU265BM18V, LaserJet"
@@ -292,17 +346,6 @@ const ComputerSupport = () => {
             </button>
           </div>
 
-          <div className="mt-6 flex flex-col sm:flex-row sm:items-center sm:gap-4">
-            <button className="text-blue-600 border border-blue-600 px-4 py-2 rounded-md hover:bg-blue-50 transition">
-              Or, let HP detect your product
-            </button>
-            <Link
-              to="/redirect"
-              className="text-blue-500 text-sm hover:underline mt-2 sm:mt-0"
-            >
-              Find out more
-            </Link>
-          </div>
 
           <div className="mt-6 flex items-center gap-2">
             <CircleUserRound className="text-blue-500" />
@@ -316,118 +359,117 @@ const ComputerSupport = () => {
         </div>
 
         
-        <div className="md:border-l md:pl-10 border-gray-300">
-          <h3 className="text-xl font-semibold text-gray-800 mb-4">
-            How to find a serial number for a printer
+        <div className="md:border-l md:pl-10 border-gray-300 mx-auto">
+          <h3 className="text-xl font-light text-gray-800 mb-4">
+            Select a product type for tips on finding your serial number
           </h3>
           <ul className="space-y-3 text-blue-600 text-sm">
-            <li>
-              <Link to="/redirect" className="hover:underline">
-                Locate your product's information label
+            <li className="flex items-center gap-2">
+            <img src="/src/assets/images/Laptop.svg" alt="" />
+              <Link to="/redirect" className="hover:underline text-lg">
+                Laptop
               </Link>
             </li>
-            <li>
-              <Link to="/redirect" className="hover:underline">
-                Watch a video
-              </Link>
-            </li>
-            <li>
-              <Link to="/redirect" className="hover:underline">
-                Samsung printer help
+
+            <li className="flex items-center gap-2">
+            <img src="/src/assets/images/Desktop.svg" alt="" />
+              <Link to="/redirect" className="hover:underline text-lg">
+                Desktop
               </Link>
             </li>
           </ul>
         </div>
       </div>
-    </div> 
+    </div>  */}
 
+    <div className="bg-gray-50 py-12 px-4 sm:px-6">
+  {/* Header Section */}
+  <div className="container mx-auto flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6 mb-10">
+    <img
+      src="/src/assets/images/identify_product_all.svg"
+      alt="Magnifier Icon"
+      className="w-16 h-16 sm:w-20 sm:h-20 object-cover"
+    />
+    <h2 className="text-xl sm:text-2xl font-light text-gray-800 leading-tight text-center sm:text-left">
+      Identify your printer for manuals and
+      <br className="hidden md:block" />
+      specific product information
+    </h2>
+  </div>
 
+  {/* Content Grid */}
+  <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+    {/* Left Column */}
+    <div className="w-full px-2 sm:px-6">
+      {/* Button + Link */}
+      <div className="flex flex-col sm:flex-row sm:items-center sm:gap-4">
+        <button className="bg-blue-600 text-white border border-blue-600 px-4 py-2 rounded-md hover:bg-blue-700 transition">
+          Let HP detect your product
+        </button>
+        <Link
+          to="/redirect"
+          className="text-blue-500 text-sm hover:underline mt-2 sm:mt-0"
+        >
+          Find out more <ChevronRight className="inline-block" />
+        </Link>
+      </div>
 
-    {/* =============================================================== */}
+      {/* Description Text */}
+      <p className="text-gray-700 mt-6 text-sm sm:text-base">
+        Or, enter your serial number, product number or product name
+      </p>
 
-      {/* <div className="container mx-auto bg-gray-50 py-8 md:py-12 px-4 sm:px-6">
-        <div className="flex flex-col md:flex-row items-start md:items-center">
-          <img
-            src="/images/identify_product_all.svg"
-            alt="Magnifier Icon"
-            className="hidden md:block w-20 h-20 object-cover"
-          />
-          <h2 className="text-xl md:text-2xl md:ml-6  text-gray-800 leading-tight">
-            Identify your printer for manuals and
-            <br className="hidden md:block" />
-            specific product information
-          </h2>
-        </div>
-        <div className="container mx-auto">
-          <div className="w-full mt-8 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 items-start">
-            <div>
-              <p className="text-gray-700 mb-3 sm:mb-2">
-                Enter your serial number, product number or product name
-              </p>
+      {/* Input Section */}
+      <div className="flex flex-col sm:flex-row items-stretch gap-4 mt-5">
+        <input
+          type="text"
+          placeholder="Example: HU265BM18V, LaserJet"
+          className="flex-1 border border-gray-300 px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+        <button className="bg-gray-500 text-white px-6 py-2 rounded-md hover:bg-gray-600">
+          Submit
+        </button>
+      </div>
 
-              <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4">
-                <input
-                  type="text"
-                  placeholder="Example: HU265BM18V, LaserJet"
-                  className="w-full border border-gray-300 px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-                <button className="w-full sm:w-auto bg-gray-300 text-white px-6 py-2 rounded-md">
-                  Submit
-                </button>
-              </div>
+      {/* Sign In */}
+      <div className="mt-6 flex items-center gap-2">
+        <CircleUserRound className="text-blue-500" />
+        <Link
+          to="/redirect"
+          className="text-blue-500 hover:underline text-sm"
+        >
+          Sign in to select a saved product
+        </Link>
+      </div>
+    </div>
 
-              <div className="mt-6 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
-                <button className="text-blue-600 border border-blue-600 px-4 py-2 rounded-md hover:bg-blue-50 transition whitespace-nowrap">
-                  Or, let HP detect your product
-                </button>
-                <Link
-                  to="/redirect"
-                  className="text-blue-500 text-sm hover:underline text-center sm:text-left"
-                >
-                  Find out more
-                </Link>
-              </div>
+    {/* Right Column */}
+    <div className="w-full md:border-l md:pl-10 border-gray-300 px-2 sm:px-6">
+      <h3 className="text-lg sm:text-xl font-light text-gray-800 mb-4">
+        Select a product type for tips on finding your serial number
+      </h3>
+      <ul className="space-y-4 text-blue-600 text-sm sm:text-base">
+        <li className="flex items-center gap-3">
+          <img src="/src/assets/images/Laptop.svg" alt="Laptop" className="w-6 h-6" />
+          <Link to="/redirect" className="hover:underline text-base">
+            Laptop
+          </Link>
+        </li>
+        <li className="flex items-center gap-3">
+          <img src="/src/assets/images/Desktop.svg" alt="Desktop" className="w-6 h-6" />
+          <Link to="/redirect" className="hover:underline text-base">
+            Desktop
+          </Link>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
 
-              <div className="mt-6 flex items-center justify-center sm:justify-start gap-2">
-                <CircleUserRound className="text-blue-500" />
-                <Link
-                  to="/redirect"
-                  className="text-blue-500 hover:underline text-sm"
-                >
-                  Sign in to select a saved product
-                </Link>
-              </div>
-            </div>
-
-            <div className="md:border-l md:pl-8 lg:pl-10 border-gray-300">
-              <h3 className="text-lg sm:text-xl text-gray-800 mb-3 sm:mb-4">
-                How to find a serial number for a printer
-              </h3>
-              <ul className="space-y-2 sm:space-y-3 text-blue-600 text-sm">
-                <li>
-                  <Link to="/redirect" className="hover:underline block">
-                    Locate your product's information label
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/redirect" className="hover:underline block">
-                    Watch a video
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/redirect" className="hover:underline block">
-                    Samsung printer help
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div> */}
 
       {/* 6th section */}
 
-      <div className="w-full bg-white py-10 px-4 text-center">
+      {/* <div className="w-full bg-white py-10 px-4 text-center">
         <div className="mb-10">
           <h3 className="text-xl md:text-2xl font-medium mb-4">
             Search our knowledge library
@@ -444,7 +486,7 @@ const ComputerSupport = () => {
           </div>
         </div>
 
-        {/* carousel */}
+       
         <div className="relative w-full max-w-6xl mx-auto overflow-hidden rounded-md mt-10">
           {slides.map((slide, index) => (
             <div
@@ -502,7 +544,7 @@ const ComputerSupport = () => {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };
