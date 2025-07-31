@@ -167,7 +167,7 @@ export default function Header() {
   return (
     <header className="w-full font-[Segoe UI] text-[#1a1a1a] relative z-50">
       {/* Top Header */}
-      <div className="container  flex items-center justify-between px-4 sm:px-8 py-4 border-b border-gray-200 bg-white">
+      <div className="container mx-auto flex items-center justify-between px-4 sm:px-8 py-4 border-b border-gray-200 bg-white">
         <div className="flex items-center gap-6 relative">
           <Link to="/">
             <img
@@ -178,19 +178,18 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex gap-6 text-sm text-gray-700 font-medium text-[20px]">
+          <nav className="hidden sm:flex gap-6 text-sm text-gray-700 font-medium text-[20px]">
             <div
               className="relative"
               onMouseEnter={() => handleMenuToggle(true)}
               onMouseLeave={() => handleMenuToggle(false)}
             >
-              <span className="hover:text-black cursor-pointer">Explore</span>
-
+<span className="hover:text-black cursor-pointer font-hpsimplifiedregular">Explore</span>
               {showMegaMenu && (
                 <div className="absolute w-[650px] bg-white shadow-lg z-40">
                   <div className="grid grid-cols-3 gap-3 p-6">
                     {/* Laptops */}
-                    <div>
+                    <div className="font-hpsimplifiedlight">
                       <h4 className="mb-2">Laptops</h4>
                       <ul className="text-[18px] font-light space-y-1 text-gray-500 grid grid-cols-1 gap-3 p-5">
                         <li>

@@ -34,15 +34,15 @@ export default function HPStyledCarousel() {
   return (
     <div className="relative container mt-10">
         <div className="">
-            <p className="px-0 lg:px-6 text-[25px]  sm:text-[30px] md:text-[40px] leading-[30px] text-center sm:text-start  text-black mb-8">Enter a topic to search our knowledge library</p>
+            <p className="px-0 text-[25px]  sm:text-[30px] md:text-[40px] leading-[30px] text-center sm:text-start  text-black mb-8">Enter a topic to search our knowledge library</p>
             
- <div className="w-full px-6 lg:px-6  sm:w-1/2">
+ <div className=" sm:w-1/2">
 
           <div class="relative border border-gray-400 mb-8 sm:mb-16">
             <input
               type="text"
               placeholder="What can we help you with?"
-              class="w-full text-start pl-2 text-[15px] sm:text-[20px]  focus:outline-none"
+              class="w-full text-start pl-2 text-[15px]  py-2  focus:outline-none"
             />
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -62,7 +62,7 @@ export default function HPStyledCarousel() {
         </div>
 
         </div>
-      <div className="flex px-6 lg:px-6 relative">
+      <div className="flex relative">
         {/* Slider */}
         <div className="w-full relative c overflow-hidden h-[280px]">
           {slides.map((slide, i) => (
@@ -82,7 +82,7 @@ export default function HPStyledCarousel() {
               {/* Text Overlay */}
               <div className="absolute top-[20%] left-10 text-white max-w-md">
                 <h2 className="text-4xl font-bold">{slide.title}</h2>
-                <p className="text-[20px] mt-1 ">{slide.subtitle}</p>
+                <p className="text-[20px] mt-1 leading-7">{slide.subtitle}</p>
                 <button className="bg-white text-black text-sm font-medium px-6 py-2 border border-gray-600 hover:bg-gray-100 transition">
                   {slide.button}
                 </button>

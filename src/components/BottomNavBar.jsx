@@ -90,7 +90,6 @@
 // }
 
 
-
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
@@ -153,87 +152,95 @@ export default function SupportNav() {
     return submenu.some((sub) => location.pathname === sub.to);
   };
 
+  const handleMouseEnter = (label) => {
+    // Use a small delay to prevent rapid toggling
+    const timer = setTimeout(() => setOpenDropdown(label), 100);
+    return () => clearTimeout(timer);
+  };
+
+  const handleMouseLeave = () => {
+    // Delay closing to avoid flicker
+    const timer = setTimeout(() => setOpenDropdown(null), 100);
+    return () => clearTimeout(timer);
+  };
+
   const toggleDropdown = (label) => {
     setOpenDropdown(openDropdown === label ? null : label);
   };
 
   return (
-    <nav className="bg-black text-white text-[15px]">
+    <nav className="bg-black text-white text-[16px] relative leading-[24px]">
       {/* Desktop Nav */}
-      <ul className="hidden sm:flex items-center justify-center gap-6 px-6 relative">
+      <ul className="hidden sm:flex items-center justify-center gap-6  cursor-pointer">
         <li>
           <Link
             to="/"
-            className={`pb-3 ${
-              isActive("/") ? "border-b-4 border-[#e0e0e0]" : ""
-            }`}
+            className={`pb-2 ${isActive("/") ? "border-b-4 border-[#e0e0e0]" : ""}`}
+
           >
             Support Home
           </Link>
         </li>
 
-        {menuItems.map((item, idx) => {
-          const activeDropdown = item.hasDropdown && isSubmenuActive(item.submenu);
-          return (
-            <li key={idx} className="relative group">
-              <div className="flex items-center space-x-1">
-                {item.hasDropdown ? (
-                  <button
-                    type="button"
-                    onClick={() => toggleDropdown(item.label)}
-                    className={`py-3 text-white ${
-                      openDropdown === item.label || activeDropdown
-                        ? "border-b-4 border-[#e0e0e0]"
-                        : ""
-                    }`}
-                  >
-                    {item.label}
-                  </button>
-                ) : (
-                  <Link
-                    to={item.to}
-                    className={`py-3 ${
-                      isActive(item.to) ? "border-b-4 border-[#e0e0e0]" : ""
-                    }`}
-                  >
-                    {item.label}
-                  </Link>
-                )}
+      {menuItems.map((item, idx) => {
+  const activeDropdown = item.hasDropdown && isSubmenuActive(item.submenu);
+  const isItemActive = isActive(item.to) || activeDropdown;
 
-                {item.hasDropdown && (
-                  <span className="text-white text-lg">
-                    {openDropdown === item.label ? (
-                      <IoIosArrowUp />
-                    ) : (
-                      <IoIosArrowDown />
-                    )}
-                  </span>
-                )}
-              </div>
+  return (
+    <li key={idx} className="relative group">
+      <div
+        className={`flex items-center space-x-1 py-2 border-b-2 ${
+          isItemActive ? "border-[#e0e0e0]" : "border-transparent"
+        }`}
+        onMouseEnter={item.hasDropdown ? () => handleMouseEnter(item.label) : undefined}
+        onMouseLeave={item.hasDropdown ? handleMouseLeave : undefined}
+      >
+        {item.hasDropdown ? (
+          <span className="cursor-default">{item.label}</span>
+        ) : (
+          <Link
+            to={item.to}
+           
+          >
+            {item.label}
+          </Link>
+        )}
 
-              {/* Desktop Submenu */}
-              {item.hasDropdown && openDropdown === item.label && (
-                <div className="absolute top-full left-0 mt-2 bg-white text-black shadow-md rounded w-48 z-50">
-                  <ul className="py-2">
-                    {item.submenu.map((sub, subIdx) => (
-                      <li key={subIdx}>
-                        <Link
-                          to={sub.to}
-                          onClick={() => setOpenDropdown(null)}
-                          className={`block px-4 py-2 hover:bg-gray-100 ${
-                            isActive(sub.to) ? "bg-gray-100 font-medium" : ""
-                          }`}
-                        >
-                          {sub.label}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-            </li>
-          );
-        })}
+        {item.hasDropdown && (
+          <span className="text-white text-lg">
+            {openDropdown === item.label ? <IoIosArrowUp /> : <IoIosArrowDown />}
+          </span>
+        )}
+      </div>
+
+      {/* Desktop Submenu */}
+      {item.hasDropdown && openDropdown === item.label && (
+        <div
+          className="absolute top-full left-0  bg-white text-black shadow-md rounded w-48 z-50"
+          onMouseEnter={() => handleMouseEnter(item.label)}
+          onMouseLeave={handleMouseLeave}
+        >
+          <ul className=" absolute z-[1000] bg-[#f8f8f8] shadow-[0_2px_10px_#0000002d] w-[250px] px-3 py-4">
+            {item.submenu.map((sub, subIdx) => (
+              <li key={subIdx}>
+                <Link
+                  to={sub.to}
+                  onClick={() => setOpenDropdown(null)}
+                  className={`block px-4 py-2 hover:bg-gray-100 w-full hover:border-b-3 border-gray-400  ${
+                    isActive(sub.to) ? "bg-gray-100 font-medium" : ""
+                  }`}
+                >
+                  {sub.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </li>
+  );
+})}
+
       </ul>
 
       {/* Mobile Nav */}
@@ -258,7 +265,7 @@ export default function SupportNav() {
               const isActiveSub = isSubmenuActive(item.submenu);
               return (
                 <li key={idx}>
-                  <div className="flex justify-between items-center hover:bg-gray-100">
+                  <div className="flex justify-between items-center">
                     <Link
                       to={item.to}
                       onClick={() => {
@@ -286,11 +293,7 @@ export default function SupportNav() {
                           toggleDropdown(item.label);
                         }}
                       >
-                        {openDropdown === item.label ? (
-                          <IoIosArrowUp />
-                        ) : (
-                          <IoIosArrowDown />
-                        )}
+                        {openDropdown === item.label ? <IoIosArrowUp /> : <IoIosArrowDown />}
                       </span>
                     )}
                   </div>
