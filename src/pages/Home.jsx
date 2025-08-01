@@ -1,7 +1,7 @@
 import { SlArrowRight } from "react-icons/sl";
 import { CgProfile } from "react-icons/cg";
 import { useNavigate } from "react-router-dom";
-import TailwindCarousel from "../components/TailwindCarousel"
+import TailwindCarousel from "../components/TailwindCarousel";
 export default function Home() {
   const navigate = useNavigate();
 
@@ -30,7 +30,9 @@ export default function Home() {
               />
             </div>
             <div className="flex items-center justify-between px-4 py-3 border-t">
-              <p className="text-xl font-[Forma_DJR_UI]">Software and Drivers</p>
+              <p className="text-xl font-[Forma_DJR_UI]">
+                Software and Drivers
+              </p>
               <SlArrowRight className="text-gray-600" />
             </div>
           </div>
@@ -69,22 +71,38 @@ export default function Home() {
         </div>
 
         {/* Other Product Support */}
-        <div className="bg-[#ebf9ff] py-6 text-center border-b">
+        <div className="bg-[#ebf9ff] py-6 text-center  border-b">
           <div className="flex flex-col sm:flex-row justify-center gap-6 text-lg font-[Forma_DJR_Micro]">
             <span className="text-[20px]">Other product Support:</span>
-            <a href="#" className="text-[#0278ab] underline flex items-center gap-2">
-              <img src="/src/assets/images/windows icon.png" alt="Windows" className="w-5 h-5" />
+            <a
+              href="#"
+              className="text-[#0278ab] underline flex items-center gap-2"
+            >
+              <img
+                src="/src/assets/images/windows icon.png"
+                alt="Windows"
+                className="w-5 h-5"
+              />
               Windows 11 Support
             </a>
-            <a href="#" className="text-[#0278ab] underline flex items-center gap-2">
-              <img src="/src/assets/images/poly icon.png" alt="Poly" className="w-5 h-5" />
+            <a
+              href="#"
+              className="text-[#0278ab] underline flex items-center gap-2"
+            >
+              <img
+                src="/src/assets/images/poly icon.png"
+                alt="Poly"
+                className="w-5 h-5"
+              />
               Poly Support
             </a>
           </div>
         </div>
-{/* more support resources section */}
-        <div class="container flex gap-20  py-20 text-[#000000] text-[18px]">
-          <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+
+        {/* more support resources section */}
+        <div className="container flex gap-20  py-20 text-[#000000] text-[18px]">
+          <div className="flex flex-wrap gap-6 items-center justify-center md:justify-start">
+            {/* card-issue-1 */}
             <div
               onClick={() => navigate("/PrinterHelp")}
               class="w-[330px] sm:w-[250px] h-[220px] border border-black  cursor-pointer hover:bg-[#ddf2fc]"
@@ -108,7 +126,10 @@ export default function Home() {
               </div>
             </div>
 
-            <div class="w-[330px] sm:w-[250px] h-[220px] border border-black  cursor-pointer hover:bg-[#ddf2fc]">
+
+             {/* card-issue-2 */}
+            
+<div class="w-[330px] sm:w-[250px] h-[220px] border border-black  cursor-pointer hover:bg-[#ddf2fc]">
               <div class="flex items-center pt-10 pl-5 h-[120px]">
                 <img
                   src="/src/assets/images/Content_checkwarranty.svg"
@@ -124,7 +145,9 @@ export default function Home() {
               </div>
             </div>
 
-            <div class="w-[330px] sm:w-[250px] h-[220px] border border-black  cursor-pointer hover:bg-[#ddf2fc]">
+
+             {/* card-issue-3 */}
+           <div class="w-[330px] sm:w-[250px] h-[220px] border border-black  cursor-pointer hover:bg-[#ddf2fc]">
               <div class="flex items-center pt-10 pl-5 h-[120px]">
                 <img
                   src="/src/assets/images/Content_contact.svg"
@@ -143,39 +166,40 @@ export default function Home() {
                 </span>
               </div>
             </div>
-          </div>
 
-          <div class="text-start font-[Forma DJR UI] ">
-            <h3 class="mb-2 text-start">More Support Resources</h3>
-            <ul class="text-[17px] text-[#0278ab]  font-thin leading-10 text-start ">
-              <li>
-                <a href="#" class="underline hover:text-green-950 ">
-                  Windows 11 Support Information
-                </a>
-              </li>
-              <li>
-                <a href="#" class="underline hover:text-green-950 ">
-                  Register your product
-                </a>
-              </li>
-              <li>
-                <a href="#" class="underline hover:text-green-950 ">
-                  Visit our Repair Center
-                </a>
-              </li>
-              <li>
-                <a href="#" class="underline hover:text-green-950 text-black">
-                  Poly Collaboration Devices
-                </a>
-              </li>
-            </ul>
-          </div>
 
-         
+            <div className="ml-0 md:ml-20">
+              <h3 class="mb-2 text-start">More Support Resources</h3>
+              <ul class="text-[17px] text-[#0278ab]  font-thin leading-10 text-start ">
+                <li>
+                  <a href="#" class="underline hover:text-green-950 ">
+                    Windows 11 Support Information
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="underline hover:text-green-950 ">
+                    Register your product
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="underline hover:text-green-950 ">
+                    Visit our Repair Center
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="underline hover:text-green-950 text-black">
+                    Poly Collaboration Devices
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
         </div>
         <hr />
+
         {/* Product Identification Section */}
-        <div className= "py-10 container ">
+        <div className="py-10 container ">
           <h2 className="text-2xl sm:text-3xl md:text-4xl text-center sm:text-left mb-8">
             Identify your product for manuals and specific product information
           </h2>
@@ -211,41 +235,73 @@ export default function Home() {
                 <button className="border border-black px-4 py-2 text-lg hover:bg-gray-100">
                   Or, let HP detect your product
                 </button>
-                <a href="#" className="text-lg text-black underline hover:text-blue-700">
+                <a
+                  href="#"
+                  className="text-lg text-black underline hover:text-blue-700"
+                >
                   Find out more
                 </a>
               </div>
-              <a href="#" className="flex items-center gap-2 text-[#0278ab] text-lg hover:underline">
-                <CgProfile className="h-6 w-6" /> Sign in to select a saved product
+              <a
+                href="#"
+                className="flex items-center gap-2 text-[#0278ab] text-lg hover:underline"
+              >
+                <CgProfile className="h-6 w-6" /> Sign in to select a saved
+                product
               </a>
             </div>
             <div className="border-l pl-6">
               <div className="flex flex-col gap-4 mb-4">
-               <div className="flex items-center gap-2">
-                 <img src="/src/assets/images/Printer.svg" alt="Printer" className="w-10 h-10 cursor-pointer" />
-                <span>Printer</span>
-               </div>
-               <div className="flex items-center gap-2">
-                <img src="/src/assets/images/Laptop.svg" alt="Laptop" className="w-10 h-10   cursor-pointer    "  />
-                <span>Laptop</span>
-               </div>
-               <div className="flex items-center gap-2">
-                <img src="/src/assets/images/Monitor.svg" alt="Monitor" className="w-10 h-10 cursor-pointer" />
-                <span>Desktop</span>
-               </div>
-               
+                <div className="flex items-center gap-2">
+                  <img
+                    src="/src/assets/images/Printer.svg"
+                    alt="Printer"
+                    className="w-10 h-10 cursor-pointer"
+                  />
+                  <span>Printer</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <img
+                    src="/src/assets/images/Laptop.svg"
+                    alt="Laptop"
+                    className="w-10 h-10   cursor-pointer    "
+                  />
+                  <span>Laptop</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <img
+                    src="/src/assets/images/Monitor.svg"
+                    alt="Monitor"
+                    className="w-10 h-10 cursor-pointer"
+                  />
+                  <span>Desktop</span>
+                </div>
               </div>
-              <p className="text-base font-semibold mb-2">How to find a serial number for a printer</p>
+              <p className="text-base font-semibold mb-2">
+                How to find a serial number for a printer
+              </p>
               <ul className="text-[#0278ab] text-base space-y-4">
-                <li><a href="#" className="underline">Locate your product’s information label</a></li>
-                <li><a href="#" className="underline">Watch a video</a></li>
-                <li><a href="#" className="underline">Samsung printer help</a></li>
+                <li>
+                  <a href="#" className="underline">
+                    Locate your product’s information label
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="underline">
+                    Watch a video
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="underline">
+                    Samsung printer help
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
         </div>
-         <hr />
-        <TailwindCarousel/>
+        <hr />
+        <TailwindCarousel />
       </div>
     </section>
   );
