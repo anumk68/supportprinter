@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube, FaChevronDown, FaChevronUp } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube,FaChevronDown } from "react-icons/fa";
 
 const Footer = () => {
   const [openSection, setOpenSection] = useState(null);
@@ -17,94 +17,97 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-black  text-white text-[15px] font-sans py-5 border-gray-200 mt-10">
-     <div className="container">
-      {/* Country Selector */}
-      <div className=" px-4 sm:px-0  w-full flex items-center space-x-3 pb-3">
-        <span className="font-semibold">Country/Region:</span>
-        <a href="#" className="flex items-center space-x-2 hover:underline">
-          <img src="/src/assets/images/india.webp" alt="India" className="w-5 h-4" />
-          <span>India</span>
-        </a>
-      </div>
+    <footer className="bg-black text-white text-[15px] font-[Forma_DJR_UI] py-6 mt-10">
+      <div className="container mx-auto px-4 sm:px-6">
+        {/* Country Selector */}
+        <div className="flex items-center space-x-2 pb-4">
+          <span className="font-semibold">Country/Region:</span>
+          <a href="#" className="flex items-center space-x-2 hover:underline">
+            <img src="/src/assets/images/india.webp" alt="India" className="w-5 h-4" />
+            <span>India</span>
+          </a>
+        </div>
+        <hr className="border-white w-full" />
 
-      {/* Footer Columns with Mobile Dropdown */}
-      <div className="container mx-auto py-10 border-t grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
-        {footerData.map((section, index) => (
-          <div key={index} className="border-b  border-gray-200 md:border-none">
-            <div
-              className="flex justify-between items-center  cursor-pointer md:cursor-default"
-              onClick={() => isMobile && toggleSection(index)}
-            >
-              <h4 className="font-semibold text-white px-4 cursor-pointer mb-0 sm:mb-4  pb-3 md:pb-0">{section.title}</h4>
-              {isMobile && (
-                <span className="ml-2 px-4 cursor-pointer">
-                  {openSection === index ? <FaChevronUp /> : <FaChevronDown />}
-                </span>
-              )}
+        {/* Footer Columns with Mobile Dropdown */}
+        <div className="py-6 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+          {footerData.map((section, index) => (
+            <div key={index} className="border-b border-gray-700 md:border-none">
+              <div
+                className="flex justify-between items-center cursor-pointer md:cursor-default"
+                onClick={() => isMobile && toggleSection(index)}
+              >
+                <h4 className="font-semibold text-white py-2 px-0 md:px-0">{section.title}</h4>
+                {isMobile && (
+                  <span className="text-white">
+                    {openSection === index ? <FaChevronUp /> : <FaChevronDown />}
+                  </span>
+                )}
+              </div>
+              <ul
+                className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                  isMobile
+                    ? openSection === index
+                      ? "max-h-96 opacity-100 mt-2"
+                      : "max-h-0 opacity-0"
+                    : "max-h-full opacity-100 mt-2"
+                }`}
+              >
+                {section.links.map((link, i) => (
+                  <li key={i} className="py-1">
+                    <a
+                      href={link.href}
+                      target={link.external ? "_blank" : "_self"}
+                      rel={link.external ? "noopener noreferrer" : ""}
+                      className="text-white hover:underline"
+                    >
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <ul
-              className={`overflow-hidden w-full transition-all duration-300 ease-in-out ${
-                isMobile
-                  ? openSection === index
-                    ? "max-h-96 mt-2 opacity-100 "
-                    : "max-h-0 opacity-0"
-                  : "block mt-2 opacity-100"
-              }`}
-            >
-              {section.links.map((link, i) => (
-                <li key={i}>
-                  <a
-                    href={link.href}
-                    target={link.external ? "_blank" : "_self"}
-                    rel={link.external ? "noopener noreferrer" : ""}
-                    className="block hover:underline py-3 sm:py-1 px-4 bg-white md:bg-black md:text-white text-black"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
-
-        {/* Stay Connected */}
-        <div className="px-4 ">
-          <h4 className="font-semibold mb-2">Stay Connected</h4>
-          <div className="flex space-x-4 mt-9">
-            <a href="http://www.facebook.com/HPindia" target="_blank" rel="noreferrer">
-              <FaFacebookF className="w-5 h-5 hover:text-blue-600 cursor-pointer" />
-            </a>
-            <a href="https://www.instagram.com/hp_india" target="_blank" rel="noreferrer">
-              <FaInstagram className="w-5 h-5 hover:text-pink-500 cursor-pointer" />
-            </a>
-            <a href="http://www.twitter.com/hpindia" target="_blank" rel="noreferrer">
-              <FaTwitter className="w-5 h-5 hover:text-blue-400 cursor-pointer" />
-            </a>
-            <a href="https://youtube.com/@hpindiavideos?si=QkEJ95v1TXbS6At6" target="_blank" rel="noreferrer">
-              <FaYoutube className="w-5 h-5 hover:text-red-500 cursor-pointer" />
-            </a>
-          </div>
-        </div>
-      </div>
-
-      {/* Privacy Links */}
-      <div className="container mx-auto  bg-black py-4 border-t border-gray-300">
-        <div className="flex flex-wrap px-4 sm:px-0 space-x-2 space-y-2">
-          {privacyLinks.map((link, index) => (
-            <span key={index} className="flex items-center">
-              <a href={link.href} className="hover:underline">
-                {link.label}
-              </a>
-              {index < privacyLinks.length - 1 && <span className="mx-1">|</span>}
-            </span>
           ))}
+
+          {/* Stay Connected */}
+          <div>
+            <h4 className="font-semibold mb-4">Stay Connected</h4>
+            <div className="flex space-x-4">
+              <a href="http://www.facebook.com/HPindia" target="_blank" rel="noreferrer">
+                <FaFacebookF className="w-5 h-5 hover:text-blue-600 cursor-pointer" />
+              </a>
+              <a href="https://www.instagram.com/hp_india" target="_blank" rel="noreferrer">
+                <FaInstagram className="w-5 h-5 hover:text-pink-500 cursor-pointer" />
+              </a>
+              <a href="http://www.twitter.com/hpindia" target="_blank" rel="noreferrer">
+                <FaTwitter className="w-5 h-5 hover:text-blue-400 cursor-pointer" />
+              </a>
+              <a href="https://youtube.com/@hpindiavideos?si=QkEJ95v1TXbS6At6" target="_blank" rel="noreferrer">
+                <FaYoutube className="w-5 h-5 hover:text-red-500 cursor-pointer" />
+              </a>
+            </div>
+          </div>
         </div>
-        <p className="mt-2 px-4 sm:px-0">
-          ©2025 HP Development Company, L.P. The information contained herein is subject to change without notice.
-        </p>
+
+        <hr className="border-white w-full my-6" />
+
+        {/* Privacy Links */}
+        <div className="py-4">
+          <div className="flex flex-wrap gap-2">
+            {privacyLinks.map((link, index) => (
+              <span key={index} className="flex items-center">
+                <a href={link.href} className="hover:underline">
+                  {link.label}
+                </a>
+                {index < privacyLinks.length - 1 && <span className="mx-1">|</span>}
+              </span>
+            ))}
+          </div>
+          <p className="mt-2 text-sm">
+            ©2025 HP Development Company, L.P. The information contained herein is subject to change without notice.
+          </p>
+        </div>
       </div>
-     </div>
     </footer>
   );
 };
@@ -167,4 +170,3 @@ const privacyLinks = [
   { label: "Terms of use", href: "https://www.hp.com/in-en/terms-of-use.html" },
   { label: "Cookie Preferences", href: "javascript:;" },
 ];
-

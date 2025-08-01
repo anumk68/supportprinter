@@ -1,307 +1,251 @@
 import { SlArrowRight } from "react-icons/sl";
 import { CgProfile } from "react-icons/cg";
 import { useNavigate } from "react-router-dom";
-import TailwindCarousel from "../components/TailwindCarousel";
-
+import TailwindCarousel from "../components/TailwindCarousel"
 export default function Home() {
   const navigate = useNavigate();
 
   return (
-    <section className="">
-      <div className="text-center min-h-[122px] text-[40px] text-black mb-5 font-normal pt-[30px] leading-[50px] font-[Forma_DJR_UI]">
-        <h1 className="text-2xl sm:text-4xl font-medium py-2 px-2">
-          Welcome to HP Customer Support
-        </h1>
-        <p className="mb-6 text-gray-500 text-xl sm:text-2xl py-3">
-          How can we help?
-        </p>
+    <section className="min-h-screen bg-white text-[#1a1a1a] font-[Forma_DJR_UI]">
+      <div className="py-8">
+        {/* Header */}
+        <div className="text-center mb-10">
+          <h1 className="text-2xl sm:text-[40px] font-normal leading-[50px] mb-4">
+            Welcome to HP Customer Support
+          </h1>
+          <p className="text-xl  text-gray-500 mb-6">How can we help?</p>
+        </div>
 
-        {/* card section  */}
-        <div className="flex flex-col sm:flex-row p-5 sm:p-0 items-center justify-center gap-6">
+        {/* Card Section */}
+        <div className="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10">
           <div
             onClick={() => navigate("/Softwaredrivers")}
-            class="bg-white dark:bg-gray-800 flex  items-center cursor-pointer"
+            className="border cursor-pointer hover:shadow-lg transition-shadow"
           >
-            <div class="border  dark:bg-gray-700 dark:text-gray-300">
-              <div class="overflow-hidden">
-                <img
-                  src="/src/assets/images/SWD_Tile.avif"
-                  alt="Scenic View"
-                  class="w-full h-auto transition-transform duration-300 ease-in-out hover:scale-110"
-                />
-              </div>
-              <div className="flex items-center justify-between border-t px-4 py-3 text-[23px]">
-                <p className=" font-[Forma DJR UI]">Software and Drivers</p>
-                <span className="font-semibold text-gray-600 text-[16px]">
-                  <SlArrowRight />
-                </span>
-              </div>
+            <div className="overflow-hidden">
+              <img
+                src="/src/assets/images/SWD_Tile.avif"
+                alt="Software and Drivers"
+                className="object-cover  w-full h-auto transition-transform duration-300 ease-in-out hover:scale-110"
+              />
+            </div>
+            <div className="flex items-center justify-between px-4 py-3 border-t">
+              <p className="text-xl font-[Forma_DJR_UI]">Software and Drivers</p>
+              <SlArrowRight className="text-gray-600" />
             </div>
           </div>
-
-          <div class="bg-white dark:bg-gray-800 flex  items-center cursor-pointer">
-            <div class="border  dark:bg-gray-700 dark:text-gray-300">
-              <div class="overflow-hidden">
-                <img
-                  src="/src/assets/images/Printer_new.avif"
-                  alt="Scenic View"
-                  class="w-full h-auto transition-transform duration-300 ease-in-out hover:scale-110"
-                />
-              </div>
-              <div className="flex items-center justify-between border-t px-4 py-3 text-[23px]">
-                <p className=" font-[Forma DJR UI]">Printer Support</p>
-                <span className="font-semibold text-gray-600 text-[16px]">
-                  <SlArrowRight />
-                </span>
-              </div>
+          <div
+            onClick={() => navigate("/PrinterSupport")}
+            className="border cursor-pointer hover:shadow-lg transition-shadow"
+          >
+            <div className="overflow-hidden">
+              <img
+                src="/src/assets/images/Printer_new.avif"
+                alt="Printer Support"
+                className="w-full  object-cover  h-auto transition-transform duration-300 ease-in-out hover:scale-110"
+              />
+            </div>
+            <div className="flex items-center justify-between px-4 py-3 border-t">
+              <p className="text-xl font-[Forma_DJR_UI]">Printer Support</p>
+              <SlArrowRight className="text-gray-600" />
             </div>
           </div>
-
-          <div class="bg-white dark:bg-gray-800 flex  items-center cursor-pointer">
-            <div class="border  dark:bg-gray-700 dark:text-gray-300">
-              <div class="overflow-hidden">
-                <img
-                  src="/src/assets/images/computer_new.avif"
-                  alt="Scenic View"
-                  class="w-full h-auto transition-transform duration-300 ease-in-out hover:scale-110"
-                />
-              </div>
-              <div className="flex items-center justify-between border-t px-4 py-3 text-[23px]">
-                <p className=" font-[Forma DJR UI]">Computer Support</p>
-                <span className="font-semibold text-gray-600 text-[16px]">
-                  <SlArrowRight />
-                </span>
-              </div>
+          <div
+            onClick={() => navigate("/ComputerSupport")}
+            className="border cursor-pointer hover:shadow-lg transition-shadow"
+          >
+            <div className="overflow-hidden">
+              <img
+                src="/src/assets/images/computer_new.avif"
+                alt="Computer Support"
+                className="w-full h-auto object-cover  transition-transform duration-300 ease-in-out hover:scale-110"
+              />
+            </div>
+            <div className="flex items-center justify-between px-4 py-3 border-t">
+              <p className="text-xl font-[Forma_DJR_UI]">Computer Support</p>
+              <SlArrowRight className="text-gray-600" />
             </div>
           </div>
         </div>
 
-        {/* support section */}
-        <div className=" static text-center mt-10 w-full bg-[#ebf9ff] border-b font-[Forma DJR Micro]">
-          <div className="flex flex-col sm:flex-row gap-8 sm:gap-14 items-center justify-center p-4  text-[20px] ">
-            <span>Other product Support:</span>
-            <div className="flex items-center justify-center gap-2 cursor-pointer">
-              <img src="/src/assets/images/windows icon.png" alt="window" />
-              <span className="text-[#0278ab] underline leading-0.5">
-                {" "}
-                Windows 11 Support{" "}
-              </span>
-            </div>
-            <div className="flex items-center justify-center gap-2 cursor-pointer">
-              <img src="/src/assets/images/poly icon.png" alt="poly" />
-              <span className="text-[#0278ab] underline leading-0.5">
-                Poly Support
-              </span>
-            </div>
+        {/* Other Product Support */}
+        <div className="bg-[#ebf9ff] py-6 text-center border-b">
+          <div className="flex flex-col sm:flex-row justify-center gap-6 text-lg font-[Forma_DJR_Micro]">
+            <span className="text-[20px]">Other product Support:</span>
+            <a href="#" className="text-[#0278ab] underline flex items-center gap-2">
+              <img src="/src/assets/images/windows icon.png" alt="Windows" className="w-5 h-5" />
+              Windows 11 Support
+            </a>
+            <a href="#" className="text-[#0278ab] underline flex items-center gap-2">
+              <img src="/src/assets/images/poly icon.png" alt="Poly" className="w-5 h-5" />
+              Poly Support
+            </a>
           </div>
         </div>
-
-        {/* more support resources section */}
-        <div class=" flex flex-wrap py-20 border-b  justify-center  gap-20   font-['Forma DJR UI'] text-[#000000] text-[22px]">
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+{/* more support resources section */}
+        <div className="container flex gap-20  py-20 text-[#000000] text-[18px]">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
             <div
               onClick={() => navigate("/PrinterHelp")}
-              class="w-[330px] sm:w-[280px] h-[220px] border border-black  cursor-pointer hover:bg-[#ddf2fc]"
+              className="w-[330px] sm:w-[250px] h-[220px] border border-black  cursor-pointer hover:bg-[#ddf2fc]"
             >
-              <div class="flex items-center pt-10 pl-5 h-[120px]">
+              <div className="flex items-center pt-10 pl-5 h-[120px]">
                 <img
                   src="/src/assets/images/Content_diag.svg"
                   alt="Diagnostic Icon"
-                  class="h-6"
+                  className="h-6"
                 />
               </div>
-              <div class="flex justify-between items-center px-4 py-4 border-t border-black">
-                <p class="leading-tight text-start">
+              <div className="flex justify-between items-center px-4 py-4 border-t border-black">
+                <p className="leading-[30px] text-start">
                   Use diagnostic tools to
                   <br />
                   find and fix issues
                 </p>
-                <span class="text-lg text-gray-600">
+                <span className="text-lg text-gray-600">
                   <SlArrowRight />
                 </span>
               </div>
             </div>
 
-            <div class="w-[330px] sm:w-[280px] h-[220px] border border-black  cursor-pointer hover:bg-[#ddf2fc]">
-              <div class="flex items-center pt-10 pl-5 h-[120px]">
+            <div className="w-[330px] sm:w-[250px] h-[220px] border border-black  cursor-pointer hover:bg-[#ddf2fc]">
+              <div className="flex items-center pt-10 pl-5 h-[120px]">
                 <img
                   src="/src/assets/images/Content_checkwarranty.svg"
                   alt="Diagnostic Icon"
-                  class="h-6"
+                  className="h-6"
                 />
               </div>
-              <div class="flex justify-between items-center px-4 py-4 border-t border-black">
-                <p class="leading-tight text-start">Check warranty status</p>
-                <span class="text-lg text-gray-600">
+              <div className="flex justify-between items-center px-4 py-4 border-t border-black">
+                <p className="leading-[30px] text-start">Check warranty status</p>
+                <span className="text-lg text-gray-600">
                   <SlArrowRight />
                 </span>
               </div>
             </div>
 
-            <div class="w-[330px] sm:w-[280px] h-[220px] border border-black  cursor-pointer hover:bg-[#ddf2fc]">
-              <div class="flex items-center pt-10 pl-5 h-[120px]">
+            <div className="w-[330px] sm:w-[250px] h-[220px] border border-black  cursor-pointer hover:bg-[#ddf2fc]">
+              <div className="flex items-center pt-10 pl-5 h-[120px]">
                 <img
                   src="/src/assets/images/Content_contact.svg"
                   alt="Diagnostic Icon"
-                  class="h-6"
+                  className="h-6"
                 />
               </div>
-              <div class="flex justify-between items-center px-4 py-4 border-t border-black">
-                <p class="leading-tight text-start">
+              <div className="flex justify-between items-center px-4 py-4 border-t border-black">
+                <p className="leading-[30px] text-start">
                   Contact an HP agent for
                   <br />
                   Support
                 </p>
-                <span class="text-lg text-gray-600">
+                <span className="text-lg text-gray-600">
                   <SlArrowRight />
                 </span>
               </div>
             </div>
           </div>
 
-          <div class="text-start font-[Forma DJR UI] ">
-            <h3 class="mb-2 text-start">More Support Resources</h3>
-            <ul class="text-[17px] text-[#0278ab]  font-thin leading-10 text-start ">
+          <div className="text-start font-[Forma DJR UI] ">
+            <h3 className="mb-2 text-start">More Support Resources</h3>
+            <ul className="text-[17px] text-[#0278ab]  font-thin leading-10 text-start ">
               <li>
-                <a href="#" class="underline hover:text-green-950 ">
+                <a href="#" className="underline hover:text-green-950 ">
                   Windows 11 Support Information
                 </a>
               </li>
               <li>
-                <a href="#" class="underline hover:text-green-950 ">
+                <a href="#" className="underline hover:text-green-950 ">
                   Register your product
                 </a>
               </li>
               <li>
-                <a href="#" class="underline hover:text-green-950 ">
+                <a href="#" className="underline hover:text-green-950 ">
                   Visit our Repair Center
                 </a>
               </li>
               <li>
-                <a href="#" class="underline hover:text-green-950 text-black">
+                <a href="#" className="underline hover:text-green-950 text-black">
                   Poly Collaboration Devices
                 </a>
               </li>
             </ul>
           </div>
+
+         
         </div>
-
-        {/* product search section */}
-        <div class="w-full  px-4 sm:px-8 py-10 sm:py-20  font-['Forma DJR UI']">
-          <div class="max-w-7xl mx-auto">
-            <h2 class="text-[25px]  sm:text-[30px] md:text-[40px] leading-[30px] text-center sm:text-start  text-black mb-10 sm:mb-20">
-              Identify your product for manuals and specific product information
-            </h2>
-
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-7 sm:gap-28">
-              <div class="space-y-4">
-                <div>
-                  <label class="block text-[16px] font-semibold  leading-[20px] sm:text-start text-center mb-2  text-gray-700 ">
-                    Enter your serial number, product number or product name
-                  </label>
-                  <div class="relative border border-gray-400">
-                    <input
-                      type="text"
-                      placeholder="Examples: HU265BM18V, CN123A ...."
-                      class="w-full text-start pl-2 text-[15px] sm:text-[20px]  focus:outline-none"
+        <hr />
+        {/* Product Identification Section */}
+        <div className= "py-10 container ">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl text-center sm:text-left mb-8">
+            Identify your product for manuals and specific product information
+          </h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-20">
+            <div className="space-y-6">
+              <div>
+                <label className="block text-[16px] font-semibold  mb-2">
+                  Enter your serial number, product number or product name
+                </label>
+                <div className="relative border border-gray-400">
+                  <input
+                    type="text"
+                    placeholder="Examples: HU265BM18V, CN123A ...."
+                    className="w-full p-2 text-base focus:outline-none"
+                  />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M21 21l-4.35-4.35M11 18a7 7 0 100-14 7 7 0 000 14z"
                     />
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M21 21l-4.35-4.35M11 18a7 7 0 100-14 7 7 0 000 14z"
-                      />
-                    </svg>
-                  </div>
-                </div>
-
-                <div class="flex flex-col sm:flex-row items-center space-y-7 sm:gap-28 py-0 sm:py-8 ">
-                  <button class="border border-black px-4 text-[20px] hover:bg-gray-100 cursor-pointer">
-                    Or, let HP detect your product
-                  </button>
-                  <a
-                    href="#"
-                    class="text-[20px] text-black underline font-medium hover:text-blue-700"
-                  >
-                    Find out more
-                  </a>
-                </div>
-                <div class="pt-2">
-                  <a
-                    href="#"
-                    class="flex items-center gap-2 text-[#0278ab] text-[20px] hover:underline"
-                  >
-                    <CgProfile className="h-10 w-10" />
-                    Sign in to select a saved product
-                  </a>
+                  </svg>
                 </div>
               </div>
-
-              <div class="border-l border-black pl-6">
-                <div class="flex gap-4 mb-4">
-                  <img
-                    src="/src/assets/images/Printer.svg"
-                    alt="Printer"
-                    class="w-10 h-10 cursor-pointer"
-                  />
-                  <img
-                    src="/src/assets/images/Printer.svg"
-                    alt="Laptop"
-                    class=" w-10 h-10 cursor-pointer"
-                  />
-                  <img
-                    src="/src/assets/images/Printer.svg"
-                    alt="Desktop"
-                    class="w-10 h-10 cursor-pointer"
-                  />
-                  <img
-                    src="/src/assets/images/Printer.svg"
-                    alt="Headset"
-                    class="w-10 h-10 cursor-pointer"
-                  />
-                  <img
-                    src="/src/assets/images/Printer.svg"
-                    alt="Monitor"
-                    class="w-10 h-10 cursor-pointer"
-                  />
-                </div>
-
-                <p class="text-[17px] font-semibold leading-7 py-2 sm:py-0 text-black text-start">
-                  How to find a serial number for a printer
-                </p>
-                <ul class="text-[17px] text-[#0278ab] leading-10 text-start">
-                  <li>
-                    <a href="#" class="underline">
-                      Locate your product’s information label
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="underline">
-                      Watch a video
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="underline">
-                      Samsung printer help
-                    </a>
-                  </li>
-                </ul>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <button className="border border-black px-4 py-2 text-lg hover:bg-gray-100">
+                  Or, let HP detect your product
+                </button>
+                <a href="#" className="text-lg text-black underline hover:text-blue-700">
+                  Find out more
+                </a>
               </div>
+              <a href="#" className="flex items-center gap-2 text-[#0278ab] text-lg hover:underline">
+                <CgProfile className="h-6 w-6" /> Sign in to select a saved product
+              </a>
+            </div>
+            <div className="border-l pl-6">
+              <div className="flex flex-col gap-4 mb-4">
+               <div className="flex items-center gap-2">
+                 <img src="/src/assets/images/Printer.svg" alt="Printer" className="w-10 h-10 cursor-pointer" />
+                <span>Printer</span>
+               </div>
+               <div className="flex items-center gap-2">
+                <img src="/src/assets/images/Laptop.svg" alt="Laptop" className="w-10 h-10   cursor-pointer    "  />
+                <span>Laptop</span>
+               </div>
+               <div className="flex items-center gap-2">
+                <img src="/src/assets/images/Monitor.svg" alt="Monitor" className="w-10 h-10 cursor-pointer" />
+                <span>Desktop</span>
+               </div>
+               
+              </div>
+              <p className="text-base font-semibold mb-2">How to find a serial number for a printer</p>
+              <ul className="text-[#0278ab] text-base space-y-4">
+                <li><a href="#" className="underline">Locate your product’s information label</a></li>
+                <li><a href="#" className="underline">Watch a video</a></li>
+                <li><a href="#" className="underline">Samsung printer help</a></li>
+              </ul>
             </div>
           </div>
         </div>
-
-        {/* slider components */}
-        <div className="border-t">
-          <TailwindCarousel className="container" />
-        </div>
+         <hr />
+        <TailwindCarousel/>
       </div>
     </section>
   );
