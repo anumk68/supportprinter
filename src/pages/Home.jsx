@@ -28,6 +28,7 @@ export default function Home() {
                 alt="Software and Drivers"
                 className="object-cover  w-full h-auto transition-transform duration-300 ease-in-out hover:scale-110"
               />
+
             </div>
             <div className="flex items-center justify-between px-4 py-3 border-t">
               <p className="text-xl font-[Forma_DJR_UI]">Software and Drivers</p>
@@ -47,15 +48,19 @@ export default function Home() {
             </div>
             <div className="flex items-center justify-between px-4 py-3 border-t">
               <p className="text-xl font-[Forma_DJR_UI]">Printer Support</p>
+
               <SlArrowRight className="text-gray-600" />
             </div>
           </div>
           <div
+
             onClick={() => navigate("/ComputerSupport")}
+
             className="border cursor-pointer hover:shadow-lg transition-shadow"
           >
             <div className="overflow-hidden">
               <img
+
                 src="/src/assets/images/computer_new.avif"
                 alt="Computer Support"
                 className="w-full h-auto object-cover  transition-transform duration-300 ease-in-out hover:scale-110"
@@ -80,91 +85,105 @@ export default function Home() {
               <img src="/src/assets/images/poly icon.png" alt="Poly" className="w-5 h-5" />
               Poly Support
             </a>
+
           </div>
         </div>
 {/* more support resources section */}
+
+
         <div class="container flex gap-20  py-20 text-[#000000] text-[18px]">
           <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
             <div
               onClick={() => navigate("/PrinterHelp")}
               class="w-[330px] sm:w-[250px] h-[220px] border border-black  cursor-pointer hover:bg-[#ddf2fc]"
+
             >
-              <div class="flex items-center pt-10 pl-5 h-[120px]">
+              <div className="flex items-center pt-10 pl-5 h-[120px]">
                 <img
                   src="/src/assets/images/Content_diag.svg"
                   alt="Diagnostic Icon"
-                  class="h-6"
+                  className="h-6"
                 />
               </div>
+
               <div class="flex justify-between items-center px-4 py-4 border-t border-black">
                 <p class="leading-[30px] text-start">
+
                   Use diagnostic tools to
                   <br />
                   find and fix issues
                 </p>
-                <span class="text-lg text-gray-600">
+                <span className="text-lg text-gray-600">
                   <SlArrowRight />
                 </span>
               </div>
             </div>
 
+
             <div class="w-[330px] sm:w-[250px] h-[220px] border border-black  cursor-pointer hover:bg-[#ddf2fc]">
               <div class="flex items-center pt-10 pl-5 h-[120px]">
+
                 <img
                   src="/src/assets/images/Content_checkwarranty.svg"
                   alt="Diagnostic Icon"
-                  class="h-6"
+                  className="h-6"
                 />
               </div>
+
               <div class="flex justify-between items-center px-4 py-4 border-t border-black">
                 <p class="leading-[30px] text-start">Check warranty status</p>
                 <span class="text-lg text-gray-600">
+
                   <SlArrowRight />
                 </span>
               </div>
             </div>
 
+
             <div class="w-[330px] sm:w-[250px] h-[220px] border border-black  cursor-pointer hover:bg-[#ddf2fc]">
               <div class="flex items-center pt-10 pl-5 h-[120px]">
+
                 <img
                   src="/src/assets/images/Content_contact.svg"
                   alt="Diagnostic Icon"
-                  class="h-6"
+                  className="h-6"
                 />
               </div>
+
               <div class="flex justify-between items-center px-4 py-4 border-t border-black">
                 <p class="leading-[30px] text-start">
+
                   Contact an HP agent for
                   <br />
                   Support
                 </p>
-                <span class="text-lg text-gray-600">
+                <span className="text-lg text-gray-600">
                   <SlArrowRight />
                 </span>
               </div>
             </div>
           </div>
 
-          <div class="text-start font-[Forma DJR UI] ">
-            <h3 class="mb-2 text-start">More Support Resources</h3>
-            <ul class="text-[17px] text-[#0278ab]  font-thin leading-10 text-start ">
+          <div className="text-start font-[Forma DJR UI] ">
+            <h3 className="mb-2 text-start">More Support Resources</h3>
+            <ul className="text-[17px] text-[#0278ab]  font-thin leading-10 text-start ">
               <li>
-                <a href="#" class="underline hover:text-green-950 ">
+                <a href="#" className="underline hover:text-green-950 ">
                   Windows 11 Support Information
                 </a>
               </li>
               <li>
-                <a href="#" class="underline hover:text-green-950 ">
+                <a href="#" className="underline hover:text-green-950 ">
                   Register your product
                 </a>
               </li>
               <li>
-                <a href="#" class="underline hover:text-green-950 ">
+                <a href="#" className="underline hover:text-green-950 ">
                   Visit our Repair Center
                 </a>
               </li>
               <li>
-                <a href="#" class="underline hover:text-green-950 text-black">
+                <a href="#" className="underline hover:text-green-950 text-black">
                   Poly Collaboration Devices
                 </a>
               </li>

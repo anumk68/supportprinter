@@ -1,7 +1,6 @@
 import React from "react";
 import { IoSearch } from "react-icons/io5";
-
-
+import { Link } from "react-router-dom";
 export default function PrinterHelp() {
   return (
     <div className="bg-white overflow-hidden">
@@ -43,6 +42,7 @@ export default function PrinterHelp() {
   <div className="max-w-7xl mx-auto px-4 sm:px-28 py-10 grid grid-cols-2 sm:grid-cols-3 gap-6">
     
     {/* Card 1 */}
+    <Link to="/Printer-Setup">
     <div className="bg-white rounded-2xl shadow-md text-center p-8 hover:shadow-lg cursor-pointer hover:scale-105 transition">
       <img
         src="/src/assets/images/printersetup.svg"
@@ -51,6 +51,7 @@ export default function PrinterHelp() {
       />
       <p className="text-[#165DBA] font-medium">Printer setup issues</p>
     </div>
+    </Link>
 
     {/* Card 2 */}
     <div className="bg-white rounded-2xl shadow-md text-center p-8 hover:shadow-lg cursor-pointer hover:scale-105 transition">
@@ -152,12 +153,12 @@ export default function PrinterHelp() {
     <p className="font-[HPSimplified] text-[22px] leading-[1.4] tracking-[0.3px] mb-1.5">Search our support articles</p>
   
   <div className="relative w-full  sm:w-1/2 text-center">
-  <input type="search" id="location-search" class="block text-center p-2.5 w-full z-20  text-gray-900 bg-gray-50 rounded-e-lg  text-xl  border dark:bg-gray-700 dark:border-s-gray-700  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white " placeholder="What can I help with you?" required />
-<button type="submit" class="absolute top-0 cursor-pointer end-0 h-full p-4 text-sm font-medium text-white bg-[#ccc]  border-l border-black hover:bg-[#b9b9b9]  ">
+  <input type="search" id="location-search" className="block text-center p-2.5 w-full z-20  text-gray-900 bg-gray-50 rounded-e-lg  text-xl  border dark:bg-gray-700 dark:border-s-gray-700  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white " placeholder="What can I help with you?" required />
+<button type="submit" className="absolute top-0 cursor-pointer end-0 h-full p-4 text-sm font-medium text-white bg-[#ccc]  border-l border-black hover:bg-[#b9b9b9]  ">
               
                 <IoSearch className="grid items-center text-center text-2xl"/>
 
-                <span class="sr-only">Search</span>
+                <span className="sr-only">Search</span>
             </button>
   </div>
 </div>
