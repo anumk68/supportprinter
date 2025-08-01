@@ -38,26 +38,45 @@ export default function HPStyledCarousel() {
             
  <div className=" sm:w-1/2">
 
-          <div class="relative border border-gray-400 mb-8 sm:mb-16">
+          <div className="relative border border-gray-400 mb-8 sm:mb-16">
             <input
               type="text"
               placeholder="What can we help you with?"
+
+
               class="w-full text-start pl-2 text-[15px]  py-2  focus:outline-none"
+
             />
-            <svg
+            {/* <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              stroke-width="1.5"
+              strokeWidth="1.5"
               stroke="currentColor"
-              class="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500"
+              className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap = "round"
+                strokeLinejoin = "round"
                 d="M21 21l-4.35-4.35M11 18a7 7 0 100-14 7 7 0 000 14z"
               />
-            </svg>
+            </svg> */}
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill="none"
+  viewBox="0 0 24 24"
+  strokeWidth="1.5"
+  stroke="currentColor"
+  className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500"
+>
+  <path
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    d="M21 21l-4.35-4.35M11 18a7 7 0 100-14 7 7 0 000 14z"
+  />
+</svg>
+
+
           </div>
         </div>
 
