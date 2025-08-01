@@ -8,7 +8,9 @@ import PrinterHelp from "../pages/PrinterHelp";
 import ContactAgent from "../pages/ContactAgent";
 import SoftwareDrivers from "../pages/SoftwareDrivers";
 
-import PrinterSetup from "../pages/Printer_Setup";
+import Printersetup from "../pages/optional pages/Printersetup";
+
+
 
 export default function AppRoutes() {
   return (
@@ -24,8 +26,12 @@ export default function AppRoutes() {
         <Route path="/Printer-Setup" element={<PrinterSetup/>}/>
         <Route path="/contact" element={<ContactAgent/>}/>
         <Route path="/Softwaredrivers" element={<SoftwareDrivers/>}/>
+
+        <Route path="/printersetup" element={<Printersetup/>}/>
+
         <Route path="/ComputerSupport" element={<ComputerSupport />}/>
         <Route path="/PrinterSupport" element={<PrinterSupport />}/>
+
       </Routes>
  
   );

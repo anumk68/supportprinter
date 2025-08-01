@@ -28,6 +28,7 @@ export default function Home() {
                 alt="Software and Drivers"
                 className="object-cover  w-full h-auto transition-transform duration-300 ease-in-out hover:scale-110"
               />
+
             </div>
             <div className="flex items-center justify-between px-4 py-3 border-t">
               <p className="text-xl font-[Forma_DJR_UI]">Software and Drivers</p>
@@ -47,15 +48,19 @@ export default function Home() {
             </div>
             <div className="flex items-center justify-between px-4 py-3 border-t">
               <p className="text-xl font-[Forma_DJR_UI]">Printer Support</p>
+
               <SlArrowRight className="text-gray-600" />
             </div>
           </div>
           <div
+
             onClick={() => navigate("/ComputerSupport")}
+
             className="border cursor-pointer hover:shadow-lg transition-shadow"
           >
             <div className="overflow-hidden">
               <img
+
                 src="/src/assets/images/computer_new.avif"
                 alt="Computer Support"
                 className="w-full h-auto object-cover  transition-transform duration-300 ease-in-out hover:scale-110"
@@ -80,9 +85,11 @@ export default function Home() {
               <img src="/src/assets/images/poly icon.png" alt="Poly" className="w-5 h-5" />
               Poly Support
             </a>
+
           </div>
         </div>
 {/* more support resources section */}
+
 
         <div class="container flex gap-20  py-20 text-[#000000] text-[18px]">
           <div class="grid grid-cols-2 md:grid-cols-3 gap-8">

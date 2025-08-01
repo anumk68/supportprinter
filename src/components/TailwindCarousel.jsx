@@ -45,8 +45,9 @@ export default function HPStyledCarousel() {
 
 
               class="w-full text-start pl-2 text-[15px]  py-2  focus:outline-none"
+
             />
-            <svg
+            {/* <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -59,7 +60,23 @@ export default function HPStyledCarousel() {
                 strokeLinejoin = "round"
                 d="M21 21l-4.35-4.35M11 18a7 7 0 100-14 7 7 0 000 14z"
               />
-            </svg>
+            </svg> */}
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill="none"
+  viewBox="0 0 24 24"
+  strokeWidth="1.5"
+  stroke="currentColor"
+  className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500"
+>
+  <path
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    d="M21 21l-4.35-4.35M11 18a7 7 0 100-14 7 7 0 000 14z"
+  />
+</svg>
+
+
           </div>
         </div>
 
