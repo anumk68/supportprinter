@@ -83,11 +83,13 @@ export default function Home() {
           </div>
         </div>
 {/* more support resources section */}
-        <div className="container flex gap-20  py-20 text-[#000000] text-[18px]">
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+
+        <div class="container flex gap-20  py-20 text-[#000000] text-[18px]">
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
             <div
               onClick={() => navigate("/PrinterHelp")}
-              className="w-[330px] sm:w-[250px] h-[220px] border border-black  cursor-pointer hover:bg-[#ddf2fc]"
+              class="w-[330px] sm:w-[250px] h-[220px] border border-black  cursor-pointer hover:bg-[#ddf2fc]"
+
             >
               <div className="flex items-center pt-10 pl-5 h-[120px]">
                 <img
@@ -96,8 +98,10 @@ export default function Home() {
                   className="h-6"
                 />
               </div>
-              <div className="flex justify-between items-center px-4 py-4 border-t border-black">
-                <p className="leading-[30px] text-start">
+
+              <div class="flex justify-between items-center px-4 py-4 border-t border-black">
+                <p class="leading-[30px] text-start">
+
                   Use diagnostic tools to
                   <br />
                   find and fix issues
@@ -108,32 +112,40 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="w-[330px] sm:w-[250px] h-[220px] border border-black  cursor-pointer hover:bg-[#ddf2fc]">
-              <div className="flex items-center pt-10 pl-5 h-[120px]">
+
+            <div class="w-[330px] sm:w-[250px] h-[220px] border border-black  cursor-pointer hover:bg-[#ddf2fc]">
+              <div class="flex items-center pt-10 pl-5 h-[120px]">
+
                 <img
                   src="/src/assets/images/Content_checkwarranty.svg"
                   alt="Diagnostic Icon"
                   className="h-6"
                 />
               </div>
-              <div className="flex justify-between items-center px-4 py-4 border-t border-black">
-                <p className="leading-[30px] text-start">Check warranty status</p>
-                <span className="text-lg text-gray-600">
+
+              <div class="flex justify-between items-center px-4 py-4 border-t border-black">
+                <p class="leading-[30px] text-start">Check warranty status</p>
+                <span class="text-lg text-gray-600">
+
                   <SlArrowRight />
                 </span>
               </div>
             </div>
 
-            <div className="w-[330px] sm:w-[250px] h-[220px] border border-black  cursor-pointer hover:bg-[#ddf2fc]">
-              <div className="flex items-center pt-10 pl-5 h-[120px]">
+
+            <div class="w-[330px] sm:w-[250px] h-[220px] border border-black  cursor-pointer hover:bg-[#ddf2fc]">
+              <div class="flex items-center pt-10 pl-5 h-[120px]">
+
                 <img
                   src="/src/assets/images/Content_contact.svg"
                   alt="Diagnostic Icon"
                   className="h-6"
                 />
               </div>
-              <div className="flex justify-between items-center px-4 py-4 border-t border-black">
-                <p className="leading-[30px] text-start">
+
+              <div class="flex justify-between items-center px-4 py-4 border-t border-black">
+                <p class="leading-[30px] text-start">
+
                   Contact an HP agent for
                   <br />
                   Support

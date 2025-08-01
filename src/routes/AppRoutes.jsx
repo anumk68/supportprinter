@@ -7,8 +7,9 @@ import Chromebooks from "../pages/products/chromebooks";
 import PrinterHelp from "../pages/PrinterHelp";
 import ContactAgent from "../pages/ContactAgent";
 import SoftwareDrivers from "../pages/SoftwareDrivers";
-import ComputerSupport from "../pages/ComputerSuppport";
-import PrinterSupport from "../pages/PrinterSupport";
+
+import PrinterSetup from "../pages/Printer_Setup";
+
 export default function AppRoutes() {
   return (
   
@@ -20,6 +21,7 @@ export default function AppRoutes() {
         <Route path="/products/pavilion" element={<Pavilion />} />
         <Route path="/products/chromebooks" element={<Chromebooks />} />
         <Route path="/PrinterHelp" element={<PrinterHelp />} />
+        <Route path="/Printer-Setup" element={<PrinterSetup/>}/>
         <Route path="/contact" element={<ContactAgent/>}/>
         <Route path="/Softwaredrivers" element={<SoftwareDrivers/>}/>
         <Route path="/ComputerSupport" element={<ComputerSupport />}/>

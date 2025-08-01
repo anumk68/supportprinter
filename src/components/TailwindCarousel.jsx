@@ -42,7 +42,9 @@ export default function HPStyledCarousel() {
             <input
               type="text"
               placeholder="What can we help you with?"
-              className="w-full text-start pl-2 text-[15px]   focus:outline-none"
+
+
+              class="w-full text-start pl-2 text-[15px]  py-2  focus:outline-none"
             />
             <svg
               xmlns="http://www.w3.org/2000/svg"
