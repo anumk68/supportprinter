@@ -1,6 +1,7 @@
 import React from "react";
 import { IoSearch } from "react-icons/io5";
 import { Link } from "react-router-dom";
+
 export default function PrinterHelp() {
   return (
     <div className="bg-white overflow-hidden">
@@ -54,7 +55,8 @@ export default function PrinterHelp() {
     </Link>
 
     {/* Card 2 */}
-    <div className="bg-white rounded-2xl shadow-md text-center p-8 hover:shadow-lg cursor-pointer hover:scale-105 transition">
+  <Link to="/PrinterOffline">
+    <div  className="bg-white rounded-2xl shadow-md text-center p-8 hover:shadow-lg cursor-pointer hover:scale-105 transition">
       <img
         src="/src/assets/images/printeroffline.svg"
         alt="Printer offline"
@@ -62,6 +64,7 @@ export default function PrinterHelp() {
       />
       <p className="text-[#165DBA] font-medium">Printer offline</p>
     </div>
+  </Link>
 
     {/* Card 3 */}
     <div className="bg-white rounded-2xl shadow-md text-center p-8 hover:shadow-lg cursor-pointer hover:scale-105 transition">
