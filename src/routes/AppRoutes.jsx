@@ -12,6 +12,7 @@ import ComputerSupport from "../pages/ComputerSuppport";
 import PrinterSupport from "../pages/PrinterSupport"; // ✅ added import
 import SelectProduct from "../pages/SelectProduct";
 import Printers from "../pages/Printers.Jsx";
+import PrinterOffline from "../pages/PrinterOffline";
 export default function AppRoutes() {
   return (
     <Routes>
@@ -30,6 +31,7 @@ export default function AppRoutes() {
       <Route path="/contact/SelectProduct" element={<SelectProduct/>}/>
       {/* <Route path="/drivers/printers" element={<Printers/>}/> */}
       <Route path="/softwaredrivers/printers" element={<Printers/>}/>
+      <Route path="/PrinterOffline" element={<PrinterOffline/>}/>
 
     </Routes>
   );
