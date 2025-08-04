@@ -1,18 +1,13 @@
-// import { useNavigate } from 'react-router-dom';
 
-// import { ChevronRight } from 'lucide-react';
-// import { Link } from 'react-router-dom';
-// import { Printer } from 'lucide-react';
-// import { LaptopMinimal } from 'lucide-react';
-// import { MonitorSmartphone } from 'lucide-react';
-// import { Headset } from 'lucide-react';
-// import { TabletSmartphone } from 'lucide-react';
 
 import React from 'react';
-import { FaChevronRight, FaPrint, FaLaptop, FaMobileAlt, FaHeadset, FaTabletAlt } from 'react-icons/fa';
+import { FaChevronRight } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
-
-
+import Printer from "../assets/images/Printer.svg"
+import Laptop from "../assets/images/Laptop.svg"
+import Desktop from "../assets/images/desktop.png"
+import Poly from "../assets/images/poly.svg"
+import Other from "../assets/images/other.png"
 
 const SoftwareDrivers = () => {
     const navigate=useNavigate();
@@ -63,35 +58,38 @@ const SoftwareDrivers = () => {
   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 text-center">
     <div onClick={() => navigate('/printer')} className='py-10 rounded-2xl hover:shadow-lg transition hover:bg-[#f8f8f8] shadow-[0_4px_16px_#2121211a] cursor-pointer'>
       <div className='flex justify-center mb-5'>
-        <FaPrint className="h-16 w-12 text-[#0b7dae]" />
+        <img src={Printer} alt="printer" className="h-14 w-14 " />
       </div>
       <p>Printer</p>
     </div>
 
     <div onClick={() => navigate('/laptop')} className='py-10 shadow-[0_4px_16px_#2121211a] rounded-2xl hover:shadow-lg transition hover:bg-[#f8f8f8] cursor-pointer'>
       <div className='flex justify-center mb-5'>
-        <FaLaptop className="h-16 w-12 text-[#0b7dae]" />
+        <img src={Laptop} alt="printer" className="h-14 w-14 "/>
+
       </div>
       <p>Laptop</p>
     </div>
 
     <div onClick={() => navigate('/desktop')} className='py-10 shadow-[0_4px_16px_#2121211a] rounded-2xl hover:shadow-lg transition hover:bg-[#f8f8f8] cursor-pointer'>
       <div className='flex justify-center mb-5'>
-        <FaMobileAlt className="h-16 w-12 text-[#0b7dae]" />
+        <img src={Desktop} alt="desktop"  />
+
       </div>
       <p>Desktop</p>
     </div>
 
     <div onClick={() => navigate('/poly')} className='py-10 shadow-[0_4px_16px_#2121211a] rounded-2xl hover:shadow-lg transition hover:bg-[#f8f8f8] cursor-pointer'>
       <div className='flex justify-center mb-5'>
-        <FaHeadset className="h-16 w-12 text-[#0b7dae]" />
+        <img src={Poly} alt="poly"  />
+
       </div>
       <p>Poly</p>
     </div>
 
     <div onClick={() => navigate('/other')} className='py-10 shadow-[0_4px_16px_#2121211a] rounded-2xl hover:shadow-lg transition hover:bg-[#f8f8f8] cursor-pointer'>
       <div className='flex justify-center mb-5'>
-        <FaTabletAlt className="h-16 w-12 text-[#0b7dae]" />
+      <img src={Other} alt="other"/>
       </div>
       <p>Other</p>
     </div>

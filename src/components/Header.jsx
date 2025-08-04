@@ -4,9 +4,9 @@ import { TfiSearch } from "react-icons/tfi";
 import { CiMenuBurger } from "react-icons/ci";
 import { RxCross1 } from "react-icons/rx";
 import BottomNavBar from "./BottomNavBar";
-
 import Profileicon from "../assets/images/Profile-icon.svg"
 import hpLogo from "../assets/images/HP_logo.svg";
+
 export default function Header() {
   // State for menu and search functionality
   const [showMegaMenu, setShowMegaMenu] = useState(false);

@@ -16,12 +16,11 @@ import PrinterIcon from "../assets/images/Printer.svg";
 import LaptopIcon from "../assets/images/Laptop.svg";
 import MonitorIcon from "../assets/images/Monitor.svg";
 
-
 export default function Home() {
   const navigate = useNavigate();
 
   return (
-    <section className="min-h-screen bg-white text-[#1a1a1a] font-[Forma_DJR_UI]">
+    <section className="container min-h-screen bg-white text-[#1a1a1a] font-[Forma_DJR_UI]">
       <div className="py-8">
         {/* Header */}
         <div className="text-center mb-10">
@@ -52,7 +51,7 @@ export default function Home() {
             </div>
           </div>
           <div
-            onClick={() => navigate("/PrinterSupport")}
+            onClick={() => navigate("/printer")}
             className="border cursor-pointer hover:shadow-lg transition-shadow"
           >
             <div className="overflow-hidden">
@@ -93,22 +92,14 @@ export default function Home() {
               href="#"
               className="text-[#0278ab] underline flex items-center gap-2"
             >
-              <img
-                src={WindowsIcon}
-                alt="Windows"
-                className="w-5 h-5"
-              />
+              <img src={WindowsIcon} alt="Windows" className="w-5 h-5" />
               Windows 11 Support
             </a>
             <a
               href="#"
               className="text-[#0278ab] underline flex items-center gap-2"
             >
-              <img
-                src={PolyIcon}
-                alt="Poly"
-                className="w-5 h-5"
-              />
+              <img src={PolyIcon} alt="Poly" className="w-5 h-5" />
               Poly Support
             </a>
           </div>
@@ -120,31 +111,26 @@ export default function Home() {
             {/* card-issue-1 */}
             <div
               onClick={() => navigate("/PrinterHelp")}
-              class="w-[330px] sm:w-[250px] h-[220px] border border-black  cursor-pointer hover:bg-[#ddf2fc]"
+              className="w-[330px] sm:w-[250px] h-[220px] border border-black  cursor-pointer hover:bg-[#ddf2fc]"
             >
-              <div class="flex items-center pt-10 pl-5 h-[120px]">
-                <img
-                  src={ContentDiag}
-                  alt="Diagnostic Icon"
-                  class="h-6"
-                />
+              <div className="flex items-center pt-10 pl-5 h-[120px]">
+                <img src={ContentDiag} alt="Diagnostic Icon" className="h-6" />
               </div>
-              <div class="flex justify-between items-center px-4 py-4 border-t border-black">
-                <p class="leading-[30px] text-start">
+              <div className="flex justify-between items-center px-4 py-4 border-t border-black">
+                <p className="leading-[30px] text-start">
                   Use diagnostic tools to
                   <br />
                   find and fix issues
                 </p>
-                <span class="text-lg text-gray-600">
+                <span className="text-lg text-gray-600">
                   <SlArrowRight />
                 </span>
               </div>
             </div>
 
+            {/* card-issue-2 */}
 
-             {/* card-issue-2 */}
-            
-<div class="w-[330px] sm:w-[250px] h-[220px] border border-black  cursor-pointer hover:bg-[#ddf2fc]">
+            <div class="w-[330px] sm:w-[250px] h-[220px] border border-black  cursor-pointer hover:bg-[#ddf2fc]">
               <div class="flex items-center pt-10 pl-5 h-[120px]">
                 <img
                   src={ContentCheckWarranty}
@@ -160,15 +146,10 @@ export default function Home() {
               </div>
             </div>
 
-
-             {/* card-issue-3 */}
-           <div class="w-[330px] sm:w-[250px] h-[220px] border border-black  cursor-pointer hover:bg-[#ddf2fc]">
+            {/* card-issue-3 */}
+            <div class="w-[330px] sm:w-[250px] h-[220px] border border-black  cursor-pointer hover:bg-[#ddf2fc]">
               <div class="flex items-center pt-10 pl-5 h-[120px]">
-                <img
-                  src={ContentContact}
-                  alt="Diagnostic Icon"
-                  class="h-6"
-                />
+                <img src={ContentContact} alt="Diagnostic Icon" class="h-6" />
               </div>
               <div class="flex justify-between items-center px-4 py-4 border-t border-black">
                 <p class="leading-[30px] text-start">
@@ -181,7 +162,6 @@ export default function Home() {
                 </span>
               </div>
             </div>
-
 
             <div className="ml-0 md:ml-20">
               <h3 class="mb-2 text-start">More Support Resources</h3>
@@ -208,7 +188,6 @@ export default function Home() {
                 </li>
               </ul>
             </div>
-
           </div>
         </div>
         <hr />
@@ -316,6 +295,35 @@ export default function Home() {
           </div>
         </div>
         <hr />
+        <div className="container pt-10">
+          <p className="px-0 text-[25px]  sm:text-[30px] md:text-[40px] leading-[30px] text-center sm:text-start  text-black mb-8">
+            Enter a topic to search our knowledge library
+          </p>
+
+          <div className=" sm:w-1/2">
+            <div class="relative border border-gray-400 mb-8 sm:mb-16">
+              <input
+                type="text"
+                placeholder="What can we help you with?"
+                class="w-full text-start pl-2 text-[15px]  py-2  focus:outline-none"
+              />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 21l-4.35-4.35M11 18a7 7 0 100-14 7 7 0 000 14z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
         <TailwindCarousel />
       </div>
     </section>

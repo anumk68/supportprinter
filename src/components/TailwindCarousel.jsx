@@ -33,35 +33,7 @@ export default function HPStyledCarousel() {
 
   return (
     <div className="relative container mt-10">
-        <div className="">
-            <p className="px-0 text-[25px]  sm:text-[30px] md:text-[40px] leading-[30px] text-center sm:text-start  text-black mb-8">Enter a topic to search our knowledge library</p>
-            
- <div className=" sm:w-1/2">
-
-          <div class="relative border border-gray-400 mb-8 sm:mb-16">
-            <input
-              type="text"
-              placeholder="What can we help you with?"
-              class="w-full text-start pl-2 text-[15px]  py-2  focus:outline-none"
-            />
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M21 21l-4.35-4.35M11 18a7 7 0 100-14 7 7 0 000 14z"
-              />
-            </svg>
-          </div>
-        </div>
-
-        </div>
+       
       <div className="flex relative">
         {/* Slider */}
         <div className="w-full relative c overflow-hidden h-[280px]">

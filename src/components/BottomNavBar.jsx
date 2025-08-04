@@ -93,7 +93,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
-
+import SoftwareDrivers from "../pages/SoftwareDrivers";
 export default function SupportNav() {
   const location = useLocation();
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -111,7 +111,7 @@ export default function SupportNav() {
     },
     {
       label: "Software and Drivers",
-      to: "/drivers",
+      to: "/Softwaredrivers",
     },
     {
       label: "Diagnostics",
