@@ -4,6 +4,8 @@ import { TfiSearch } from "react-icons/tfi";
 import { CiMenuBurger } from "react-icons/ci";
 import { RxCross1 } from "react-icons/rx";
 import BottomNavBar from "./BottomNavBar";
+
+import Profileicon from "../assets/images/Profile-icon.svg"
 import hpLogo from "../assets/images/HP_logo.svg";
 export default function Header() {
   // State for menu and search functionality
@@ -411,7 +413,7 @@ export default function Header() {
               )}
             </div>
 
-            <img src="/src/assets/images/Profile-icon.svg" alt="Profile" />
+            <img src={Profileicon} alt="Profile" />
             <div onClick={toggleMobile} className="cursor-pointer">
               {mobileOpen ? (
                 <RxCross1 className="h-8 w-8" />

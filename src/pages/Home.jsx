@@ -2,6 +2,21 @@ import { SlArrowRight } from "react-icons/sl";
 import { CgProfile } from "react-icons/cg";
 import { useNavigate } from "react-router-dom";
 import TailwindCarousel from "../components/TailwindCarousel";
+
+// Import all images
+import SWDTile from "../assets/images/SWD_Tile.avif";
+import PrinterNew from "../assets/images/Printer_new.avif";
+import ComputerNew from "../assets/images/computer_new.avif";
+import WindowsIcon from "../assets/images/windows icon.png";
+import PolyIcon from "../assets/images/poly icon.png";
+import ContentDiag from "../assets/images/Content_diag.svg";
+import ContentCheckWarranty from "../assets/images/Content_checkwarranty.svg";
+import ContentContact from "../assets/images/Content_contact.svg";
+import PrinterIcon from "../assets/images/Printer.svg";
+import LaptopIcon from "../assets/images/Laptop.svg";
+import MonitorIcon from "../assets/images/Monitor.svg";
+
+
 export default function Home() {
   const navigate = useNavigate();
 
@@ -24,7 +39,7 @@ export default function Home() {
           >
             <div className="overflow-hidden">
               <img
-                src="/src/assets/images/SWD_Tile.avif"
+                src={SWDTile}
                 alt="Software and Drivers"
                 className="object-cover  w-full h-auto transition-transform duration-300 ease-in-out hover:scale-110"
               />
@@ -42,7 +57,7 @@ export default function Home() {
           >
             <div className="overflow-hidden">
               <img
-                src="/src/assets/images/Printer_new.avif"
+                src={PrinterNew}
                 alt="Printer Support"
                 className="w-full  object-cover  h-auto transition-transform duration-300 ease-in-out hover:scale-110"
               />
@@ -58,7 +73,7 @@ export default function Home() {
           >
             <div className="overflow-hidden">
               <img
-                src="/src/assets/images/computer_new.avif"
+                src={ComputerNew}
                 alt="Computer Support"
                 className="w-full h-auto object-cover  transition-transform duration-300 ease-in-out hover:scale-110"
               />
@@ -79,7 +94,7 @@ export default function Home() {
               className="text-[#0278ab] underline flex items-center gap-2"
             >
               <img
-                src="/src/assets/images/windows icon.png"
+                src={WindowsIcon}
                 alt="Windows"
                 className="w-5 h-5"
               />
@@ -90,7 +105,7 @@ export default function Home() {
               className="text-[#0278ab] underline flex items-center gap-2"
             >
               <img
-                src="/src/assets/images/poly icon.png"
+                src={PolyIcon}
                 alt="Poly"
                 className="w-5 h-5"
               />
@@ -109,7 +124,7 @@ export default function Home() {
             >
               <div class="flex items-center pt-10 pl-5 h-[120px]">
                 <img
-                  src="/src/assets/images/Content_diag.svg"
+                  src={ContentDiag}
                   alt="Diagnostic Icon"
                   class="h-6"
                 />
@@ -132,7 +147,7 @@ export default function Home() {
 <div class="w-[330px] sm:w-[250px] h-[220px] border border-black  cursor-pointer hover:bg-[#ddf2fc]">
               <div class="flex items-center pt-10 pl-5 h-[120px]">
                 <img
-                  src="/src/assets/images/Content_checkwarranty.svg"
+                  src={ContentCheckWarranty}
                   alt="Diagnostic Icon"
                   class="h-6"
                 />
@@ -150,7 +165,7 @@ export default function Home() {
            <div class="w-[330px] sm:w-[250px] h-[220px] border border-black  cursor-pointer hover:bg-[#ddf2fc]">
               <div class="flex items-center pt-10 pl-5 h-[120px]">
                 <img
-                  src="/src/assets/images/Content_contact.svg"
+                  src={ContentContact}
                   alt="Diagnostic Icon"
                   class="h-6"
                 />
@@ -254,7 +269,7 @@ export default function Home() {
               <div className="flex flex-col gap-4 mb-4">
                 <div className="flex items-center gap-2">
                   <img
-                    src="/src/assets/images/Printer.svg"
+                    src={PrinterIcon}
                     alt="Printer"
                     className="w-10 h-10 cursor-pointer"
                   />
@@ -262,7 +277,7 @@ export default function Home() {
                 </div>
                 <div className="flex items-center gap-2">
                   <img
-                    src="/src/assets/images/Laptop.svg"
+                    src={LaptopIcon}
                     alt="Laptop"
                     className="w-10 h-10   cursor-pointer    "
                   />
@@ -270,7 +285,7 @@ export default function Home() {
                 </div>
                 <div className="flex items-center gap-2">
                   <img
-                    src="/src/assets/images/Monitor.svg"
+                    src={MonitorIcon}
                     alt="Monitor"
                     className="w-10 h-10 cursor-pointer"
                   />
