@@ -4,7 +4,7 @@ import { TfiSearch } from "react-icons/tfi";
 import { CiMenuBurger } from "react-icons/ci";
 import { RxCross1 } from "react-icons/rx";
 import BottomNavBar from "./BottomNavBar";
-
+import hpLogo from "../assets/images/HP_logo.svg";
 export default function Header() {
   // State for menu and search functionality
   const [showMegaMenu, setShowMegaMenu] = useState(false);
@@ -171,7 +171,7 @@ export default function Header() {
         <div className="flex items-center gap-6 relative">
           <Link to="/">
             <img
-              src="/src/assets/images/HP_logo.svg"
+               src={hpLogo}
               alt="HP Logo"
               className="h-10 sm:h-[50px] cursor-pointer"
             />
