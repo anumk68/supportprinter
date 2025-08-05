@@ -105,8 +105,8 @@ export default function SupportNav() {
       to: "/products",
       hasDropdown: true,
       submenu: [
-        { label: "Printers", to: "/products/printers" },
-        { label: "Laptops", to: "/products/laptops" },
+        { label: "Printer Support", to: "/printer" },
+        { label: "Computer Support", to: "/computer" },
       ],
     },
     {
@@ -118,7 +118,7 @@ export default function SupportNav() {
       to: "/diagnostics",
       hasDropdown: true,
       submenu: [
-        { label: "Printer Test", to: "/diagnostics/printer" },
+        { label: "Printers Diagnostic Tools", to: "/PrinterHelp" },
         { label: "PC Health Check", to: "/diagnostics/pc" },
       ],
     },

@@ -95,10 +95,7 @@ const SoftwareDrivers = () => {
     </div>
   </div>
 </div>
-
     </div>
-        
-        
         </>
     );
 }

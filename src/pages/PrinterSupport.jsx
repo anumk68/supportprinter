@@ -11,24 +11,37 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import Printbannernew from "../assets/images/Print_banner_new.avif"
+import Printerfeature from "../assets/images/Printer_feature.avif"
+import IdentiyProduct from "../assets/images/identify_product_all.svg"
+import Weeklydeals from "../assets/images/WeeklyDeals_Home_Carousel.png"
+import Psf21 from "../assets/images/PSF-21_Carousel.avif"
+import Hpsa from "../assets/images/HPSA_Carousel.avif"
+import SmartFriend from "../assets/images/SmartFriend_Home_Carousel.png"
 const PrinterSupport = () => {
   const slides = [
     {
-      image: "/images/PSF-21_Carousel.avif",
+      image: Hpsa,
       title: "HP Support Assistant",
       subtitle: "Built-in support for your PCs and printers",
       button: "Download Now",
       link: "/redirect",
     },
     {
-      image: "/images/SmartFriend_Home_Carousel.png",
+      image: SmartFriend,
       title: "Issue with your HP printer?",
       subtitle: "Use our diagnostic tools for help with common Printer issues",
       button: "Printer Diagnostic Tools",
       link: "/redirect",
     },
     {
-      image: "/images/HPSA_Carousel.avif",
+      image:  Weeklydeals,
+      title: "Check out our Weekly Deals",
+      subtitle: "Get big savings on select HP products.",
+      button: "Shop Now",
+      link: "/redirect",
+    },
+    {
+      image:  Psf21,
       title: "Check out our Weekly Deals",
       subtitle: "Get big savings on select HP products.",
       button: "Shop Now",
@@ -53,7 +66,8 @@ const PrinterSupport = () => {
 
   return (
     <>
-      <div className="banner bg-[url({ Printbannernew})] bg-contain bg-no-repeat border-b-1 border-[#cccccc] bg-[right_center] ">
+      <div  className="banner p-7 bg-contain bg-no-repeat border-b border-[#cccccc] bg-[right_center]"
+      style={{ backgroundImage: `url(${Printbannernew})` }}>
         <div className="container mx-auto flex items-center justify-between px-4 md:px-10 py-4 h-[168px]">
           <div className="w-full md:w-1/2 text-left">
             <h1 className="text-[32px] font-medium md:text-2xl text-black font-[HPSimplifiedLight]">
@@ -66,7 +80,7 @@ const PrinterSupport = () => {
 
       {/* 2nd section */}
 
-      <div className="container px-4 py-4 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-center divide-y sm:divide-y-0 sm:divide-x">
+      <div className="container px-4 py-4 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-center divide-y divide-gray-300 sm:divide-y-0 sm:divide-x">
         <div className="flex flex-col items-center space-y-2 px-4 py-4">
           <Download className="text-gray-500 text-5xl" />
 
@@ -116,7 +130,7 @@ const PrinterSupport = () => {
         <div className="w-full lg:w-1/2">
           <img
             className="w-full h-auto max-h-80 object-contain mx-auto"
-            src="/images/Printer_feature.avif"
+            src={Printerfeature}
             alt="Printer Setup"
           />
         </div>
@@ -254,7 +268,7 @@ const PrinterSupport = () => {
       <div className="container mx-auto bg-gray-50 py-8 md:py-12 px-4 sm:px-6">
         <div className="flex flex-col md:flex-row items-start md:items-center">
           <img
-            src="/images/identify_product_all.svg"
+            src={IdentiyProduct}
             alt="Magnifier Icon"
             className="hidden md:block w-20 h-20 object-cover"
           />
@@ -351,7 +365,7 @@ const PrinterSupport = () => {
         </div>
 
         {/* carousel */}
-        <div className="relative w-full max-w-6xl mx-auto overflow-hidden rounded-md mt-10">
+        <div className="relative w-full h-60 max-w-6xl mx-auto overflow-hidden rounded-md mt-10">
           {slides.map((slide, index) => (
             <div
               key={index}
@@ -362,10 +376,10 @@ const PrinterSupport = () => {
               }`}
             >
               <div
-                className="w-full h-72 md:h-96 bg-cover bg-center flex items-center"
-                style={{ backgroundImage: `url(${slide.image})` }}
+                className="p-10 bg-cover bg-center"
+                 style={{ backgroundImage: `url(${slide.image})` }}
               >
-                <div className="bg-black/50 w-full h-full flex items-center px-6 md:px-14">
+                <div className=" w-full h-full flex items-center px-6 md:px-14">
                   <div className="text-white space-y-2 text-start pl-5">
                     <h2 className="text-2xl md:text-4xl font-semibold">
                       {slide.title}
@@ -408,6 +422,7 @@ const PrinterSupport = () => {
             ))}
           </div>
         </div>
+        
       </div>
     </>
   );

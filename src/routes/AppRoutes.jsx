@@ -11,12 +11,17 @@ import PrinterSetup from "../pages/Printer_Setup";
 import SelectProduct from "../pages/SelectProduct";
 import PrintersContactHelp from "../pages/PrintersContactHelp";
 import PrinterSupport from "../pages/PrinterSupport";
+import ComputerSupport from "../pages/ComputerSupport";
+import PrinterOffline from "../pages/PrinterOffline";
+import Signin from "../account setup/Signin"
+import Createaccount from "../account setup/Createaccount"
 export default function AppRoutes() {
   return (
   
       <Routes>
         <Route path="/" element={<Home />} />
-       {/* Laptops */}
+        <Route path="/signin" element={<Signin/>}/>
+        <Route path="/createaccount" element={<Createaccount/>}/>
         <Route path="/products/spectre" element={<Spectre />} />
         <Route path="/products/envy" element={<Envy />} />
         <Route path="/products/pavilion" element={<Pavilion />} />
@@ -28,6 +33,8 @@ export default function AppRoutes() {
         <Route path="/contact/select-product" element={<SelectProduct/>}/>
         <Route path="/contact/help/printer" element={<PrintersContactHelp/>}/>
         <Route path="/printer" element={<PrinterSupport/>}/>
+        <Route path="/computer" element={<ComputerSupport/>}/>
+        <Route path="/PrinterHelp/printer/printer-offline" element={<PrinterOffline/>}/>
       </Routes>
  
   );

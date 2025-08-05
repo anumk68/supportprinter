@@ -20,7 +20,7 @@ export default function Home() {
   const navigate = useNavigate();
 
   return (
-    <section className="container min-h-screen bg-white text-[#1a1a1a] font-[Forma_DJR_UI]">
+    <section className="min-h-screen bg-white text-[#1a1a1a] font-[Forma_DJR_UI]">
       <div className="py-8">
         {/* Header */}
         <div className="text-center mb-10">
@@ -67,7 +67,7 @@ export default function Home() {
             </div>
           </div>
           <div
-            onClick={() => navigate("/ComputerSupport")}
+            onClick={() => navigate("/computer")}
             className="border cursor-pointer hover:shadow-lg transition-shadow"
           >
             <div className="overflow-hidden">

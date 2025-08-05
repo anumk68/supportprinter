@@ -64,11 +64,13 @@ export default function PrinterHelp() {
             </Link>
 
             {/* Card 2 */}
+           <Link to={'/PrinterHelp/printer/printer-offline'}>
             <div className="bg-white rounded-2xl shadow-md text-center p-8 hover:shadow-lg cursor-pointer hover:scale-105 transition">
               <img src={Printeroffline} alt="Printer offline" className="mx-auto mb-4 h-16" />
               <p className="text-[#165DBA] font-medium">Printer offline</p>
             </div>
 
+           </Link>
             {/* Card 3 */}
             <div className="bg-white rounded-2xl shadow-md text-center p-8 hover:shadow-lg cursor-pointer hover:scale-105 transition">
               <img src={Wirelessprinterissues} alt="Wireless printer issues" className="mx-auto mb-4 h-16" />
