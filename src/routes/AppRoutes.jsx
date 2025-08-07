@@ -13,8 +13,10 @@ import PrintersContactHelp from "../pages/PrintersContactHelp";
 import PrinterSupport from "../pages/PrinterSupport";
 import ComputerSupport from "../pages/ComputerSupport";
 import PrinterOffline from "../pages/PrinterOffline";
-import Signin from "../account setup/Signin"
-import Createaccount from "../account setup/Createaccount"
+import Signin from "../account setup/Signin";
+import Createaccount from "../account setup/Createaccount";
+import PrinterDrivers from "../pages/PrinterDrivers";
+import DriversProduct from "../pages/DriversProduct";
 export default function AppRoutes() {
   return (
   
@@ -35,6 +37,8 @@ export default function AppRoutes() {
         <Route path="/printer" element={<PrinterSupport/>}/>
         <Route path="/computer" element={<ComputerSupport/>}/>
         <Route path="/PrinterHelp/printer/printer-offline" element={<PrinterOffline/>}/>
+        <Route path="/drivers/printers" element={<PrinterDrivers/>}/>
+        <Route path="/drivers/products" element={<DriversProduct/>}/>
       </Routes>
  
   );

@@ -31,10 +31,10 @@ export default function PrinterHelp() {
 
         {/* Right text section */}
         <div className="w-full sm:w-1/2 sm:text-left text-center">
-          <h1 className="font-[HPSimplifiedLight] not-italic font-light text-[38px] text-black mb-4">
+          <h1 className="font-hpsimplifiedlight leading-[42px] text-[38px] text-black mb-4">
             Diagnose and solve
           </h1>
-          <p className="font-[HPSimplifiedLight] not-italic font-light text-[18px] leading-[24px] text-black">
+          <p className="font-hpsimplifiedlight  text-[18px] leading-[24px] text-black">
             In this troubleshooting hub, you’ll find the top automated and
             self-service solutions for common computer and printer problems.
             Click the tabs to switch between computer and printer topics, then

@@ -56,7 +56,7 @@ const SoftwareDrivers = () => {
 
         <div className='container mb-6'>
   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 text-center">
-    <div onClick={() => navigate('/printer')} className='py-10 rounded-2xl hover:shadow-lg transition hover:bg-[#f8f8f8] shadow-[0_4px_16px_#2121211a] cursor-pointer'>
+    <div onClick={() => navigate('/drivers/printers')} className='py-10 rounded-2xl hover:shadow-lg transition hover:bg-[#f8f8f8] shadow-[0_4px_16px_#2121211a] cursor-pointer'>
       <div className='flex justify-center mb-5'>
         <img src={Printer} alt="printer" className="h-14 w-14 " />
       </div>

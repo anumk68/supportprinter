@@ -15,10 +15,11 @@
 
 
 
+
 /* Apply the fonts to the body or specific elements */
 @layer base {
   body {
-    font-family: 'Forma DJR UI', 'HPSimplifiedLight','HP Simplified Regular','hpsimplified_light', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Forma DJR UI','Forma DJR Micro', 'HPSimplifiedLight','HP Simplified Regular','hpsimplified_light', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     color: #1a1a1a;
     background-color: #ffffff;
     font-size: 16px;
@@ -40,6 +41,14 @@
   .font-hpsimplifiedregular {
   font-family: "HP Simplified Regular";
   }
+  .font-formdjrmicro{
+    font-family: "Forma DJR Micro", "Open Sans", 'sans-serif';
+  }
+  
+.font-roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
 }
 
 .container {
@@ -52,15 +61,3 @@
 
 }
 
-/* @media (min-width: 640px) {
-  .container { max-width: 640px; }
-}
-@media (min-width: 768px) {
-  .container { max-width: 768px; }
-}
-@media (min-width: 1024px) {
-  .container { max-width: 1024px; }
-}
-@media (min-width: 1280px) {
-  .container { max-width: 1280px; }
-} */
