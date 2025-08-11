@@ -74,11 +74,15 @@ export default function PrinterDrivers() {
         </div>
        
 
+<div className="bg-[#0278ab0d] py-5">
+  <p className="container text-[16px] font-[400] leading-[24px] text-black tracking-[1px]">
+    Already have an HP account? Select from the products you own.{" "}
+    <Link to='/signin'> <span className="text-[#0278ab]">Sign in /</span></Link>
+    <Link to='/createaccount'><span className="text-[#0278ab]"> Create an account</span></Link>
+  </p>
+</div>
 
-        <div className='bg-[#0278ab0d] py-5'>
-           <p className='container text-[16px] font-[400] leading-[24px] text-black tracking-[1px] '>Already have an HP account? Select from the products you own. <span className='text-[#0278ab]'>Sign in / <span> Create an account</span></span>  </p>
-        </div>
-
+       
         <div className='container flex flex-col sm:flex-row py-10 items-center justify-between'>
           <h1 className="text-[19px] md:text-[24px] font-[400] leading-[32px] text-[#1c7a17] mb-0 tracking-[1px]">Welcome to HP Software and Drivers</h1>
 

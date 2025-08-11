@@ -1,6 +1,6 @@
 import { SlArrowRight } from "react-icons/sl";
 import { CgProfile } from "react-icons/cg";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import TailwindCarousel from "../components/TailwindCarousel";
 
 // Import all images
@@ -151,7 +151,7 @@ export default function Home() {
               <div class="flex items-center pt-10 pl-5 h-[120px]">
                 <img src={ContentContact} alt="Diagnostic Icon" class="h-6" />
               </div>
-              <div class="flex justify-between items-center px-4 py-4 border-t border-black">
+              <div  onClick={() => navigate("/contact/help/printer")} class="flex justify-between items-center px-4 py-4 border-t border-black">
                 <p class="leading-[30px] text-start">
                   Contact an HP agent for
                   <br />
@@ -172,9 +172,11 @@ export default function Home() {
                   </a>
                 </li>
                 <li>
+                 <Link to="/createaccount">
                   <a href="#" class="underline hover:text-green-950 ">
                     Register your product
                   </a>
+                 </Link>
                 </li>
                 <li>
                   <a href="#" class="underline hover:text-green-950 ">

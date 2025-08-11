@@ -1,20 +1,22 @@
 import { useState, useEffect } from "react";
-
+import Hpsacaraousel from "../assets/images/HPSA_Carousel.avif"
+import LiveLensbannerpromo from  "../assets/images/LiveLens-banner-promo.avif"
+import TeradiciCarausalBanner from "../assets/images/Teradici Carausal Banner v.2.avif"
 const slides = [
   {
-    img: "/src/assets/images/HPSA_Carousel.avif",
+    img: Hpsacaraousel,
     title: "HP Support Assistant",
     subtitle: "Built-in support for your PCs and printers",
     button: "Download Now",
   },
   {
-    img: "/src/assets/images/LiveLens-banner-promo.avif",
+    img: LiveLensbannerpromo,
     title: "LiveLens Support",
     subtitle: "Real-time video support from HP agents",
     button: "Learn More",
   },
   {
-    img: "/src/assets/images/Teradici Carausal Banner v.2.avif",
+    img: TeradiciCarausalBanner,
     title: "Teradici Remote Support",
     subtitle: "Enterprise-grade remote desktop infrastructure",
     button: "Explore",

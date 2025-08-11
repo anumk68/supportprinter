@@ -85,7 +85,7 @@ const PrinterSupport = () => {
           <Download className="text-gray-500 text-5xl" />
 
           <Link
-            to="/redirect"
+            to="/drivers/printers"
             className="text-blue-400 text-lg md:text-lg hover:underline"
           >
             Download Drivers
@@ -105,7 +105,7 @@ const PrinterSupport = () => {
         <div className="flex flex-col items-center space-y-2 px-4 py-4">
           <Headset className="text-gray-500 text-5xl" />
           <Link
-            to="/redirect"
+            to="/contact"
             className="text-blue-400 text-lg md:text-2lg hover:underline"
           >
             Contact us

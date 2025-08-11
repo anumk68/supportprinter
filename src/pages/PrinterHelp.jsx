@@ -56,68 +56,130 @@ export default function PrinterHelp() {
         <div className="py-10 bg-[linear-gradient(42deg,rgba(89,199,181,0.49)_19%,rgba(0,149,212,0.49)_83%)]">
           <div className="max-w-7xl mx-auto px-4 sm:px-28 py-10 grid grid-cols-2 sm:grid-cols-3 gap-6">
             {/* Card 1 */}
-            <Link to="/Printer-Setup">
+            <Link to="/PrinterHelp/printer/Printer-Setup">
               <div className="bg-white rounded-2xl shadow-md text-center p-8 hover:shadow-lg cursor-pointer hover:scale-105 transition">
-                <img src={Printersetup} alt="Printer setup issues" className="mx-auto mb-4 h-16" />
-                <p className="text-[#165DBA] font-medium">Printer setup issues</p>
+                <img
+                  src={Printersetup}
+                  alt="Printer setup issues"
+                  className="mx-auto mb-4 h-16"
+                />
+                <p className="text-[#165DBA] font-medium">
+                  Printer setup issues
+                </p>
               </div>
             </Link>
 
             {/* Card 2 */}
-           <Link to={'/PrinterHelp/printer/printer-offline'}>
-            <div className="bg-white rounded-2xl shadow-md text-center p-8 hover:shadow-lg cursor-pointer hover:scale-105 transition">
-              <img src={Printeroffline} alt="Printer offline" className="mx-auto mb-4 h-16" />
-              <p className="text-[#165DBA] font-medium">Printer offline</p>
-            </div>
-
-           </Link>
+            <Link to={"/PrinterHelp/printer/printer-offline"}>
+              <div className="bg-white rounded-2xl shadow-md text-center p-8 hover:shadow-lg cursor-pointer hover:scale-105 transition">
+                <img
+                  src={Printeroffline}
+                  alt="Printer offline"
+                  className="mx-auto mb-4 h-16"
+                />
+                <p className="text-[#165DBA] font-medium">Printer offline</p>
+              </div>
+            </Link>
             {/* Card 3 */}
-            <div className="bg-white rounded-2xl shadow-md text-center p-8 hover:shadow-lg cursor-pointer hover:scale-105 transition">
-              <img src={Wirelessprinterissues} alt="Wireless printer issues" className="mx-auto mb-4 h-16" />
-              <p className="text-[#165DBA] font-medium">Wireless printer issues</p>
-            </div>
+            <Link to="/PrinterHelp/printer/WirelessPrinterIssue">
+              <div className="bg-white rounded-2xl shadow-md text-center p-8 hover:shadow-lg cursor-pointer hover:scale-105 transition">
+                <img
+                  src={Wirelessprinterissues}
+                  alt="Wireless printer issues"
+                  className="mx-auto mb-4 h-16"
+                />
+                <p className="text-[#165DBA] font-medium">
+                  Wireless printer issues
+                </p>
+              </div>
+            </Link>
 
             {/* Card 4 */}
-            <div className="bg-white rounded-2xl shadow-md text-center p-8 hover:shadow-lg cursor-pointer hover:scale-105 transition">
-              <img src={Scannerissues} alt="Scanner issues" className="mx-auto mb-4 h-16" />
-              <p className="text-[#165DBA] font-medium">Scanner issues</p>
-            </div>
-
+            <Link to="/PrinterHelp/printer/Scanning-Issues">
+              <div className="bg-white rounded-2xl shadow-md text-center p-8 hover:shadow-lg cursor-pointer hover:scale-105 transition">
+                <img
+                  src={Scannerissues}
+                  alt="Scanner issues"
+                  className="mx-auto mb-4 h-16"
+                />
+                <p className="text-[#165DBA] font-medium">Scanner issues</p>
+              </div>
+            </Link>
             {/* Card 5 */}
-            <div className="bg-white rounded-2xl shadow-md text-center p-8 hover:shadow-lg cursor-pointer hover:scale-105 transition">
-              <img src={ColorOrBlack} alt="Color or black-ink-not-printing" className="mx-auto mb-4 h-16" />
-              <p className="text-[#165DBA] font-medium">Color or black-ink-not-printing</p>
-            </div>
+            <Link to="/PrinterHelp/printer/black-ink-not-printing">
+              <div className="bg-white rounded-2xl shadow-md text-center p-8 hover:shadow-lg cursor-pointer hover:scale-105 transition">
+                <img
+                  src={ColorOrBlack}
+                  alt="Color or black-ink-not-printing"
+                  className="mx-auto mb-4 h-16"
+                />
+                <p className="text-[#165DBA] font-medium">
+                  Color or black-ink-not-printing
+                </p>
+              </div>
+            </Link>
 
             {/* Card 6 */}
-            <div className="bg-white rounded-2xl shadow-md text-center p-8 hover:shadow-lg cursor-pointer hover:scale-105 transition">
-              <img src={Cartridge} alt="Cartridge issues" className="mx-auto mb-4 h-16" />
-              <p className="text-[#165DBA] font-medium">Cartridge issues</p>
-            </div>
+            <Link to="/PrinterHelp/printer/ink-cartridge-issue">
+              <div className="bg-white rounded-2xl shadow-md text-center p-8 hover:shadow-lg cursor-pointer hover:scale-105 transition">
+                <img
+                  src={Cartridge}
+                  alt="Cartridge issues"
+                  className="mx-auto mb-4 h-16"
+                />
+                <p className="text-[#165DBA] font-medium">Cartridge issues</p>
+              </div>
+            </Link>
 
             {/* Card 7 */}
-            <div className="bg-white rounded-2xl shadow-md text-center p-8 hover:shadow-lg cursor-pointer hover:scale-105 transition">
-              <img src={Printjobstuck} alt="Print job stuck in queue" className="mx-auto mb-4 h-16" />
-              <p className="text-[#165DBA] font-medium">Print job stuck in queue</p>
-            </div>
+            <Link to="/PrinterHelp/printer/print-job-stuck">
+              <div className="bg-white rounded-2xl shadow-md text-center p-8 hover:shadow-lg cursor-pointer hover:scale-105 transition">
+                <img
+                  src={Printjobstuck}
+                  alt="Print job stuck in queue"
+                  className="mx-auto mb-4 h-16"
+                />
+                <p className="text-[#165DBA] font-medium">
+                  Print job stuck in queue
+                </p>
+              </div>
+            </Link>
 
             {/* Card 8 */}
-            <div className="bg-white rounded-2xl shadow-md text-center p-8 hover:shadow-lg cursor-pointer hover:scale-105 transition">
-              <img src={Paperjam} alt="Paper jam issues" className="mx-auto mb-4 h-16" />
-              <p className="text-[#165DBA] font-medium">Paper jam issues</p>
-            </div>
+            <Link to="/PrinterHelp/printer/paper-jam">
+              <div className="bg-white rounded-2xl shadow-md text-center p-8 hover:shadow-lg cursor-pointer hover:scale-105 transition">
+                <img
+                  src={Paperjam}
+                  alt="Paper jam issues"
+                  className="mx-auto mb-4 h-16"
+                />
+                <p className="text-[#165DBA] font-medium">Paper jam issues</p>
+              </div>
+            </Link>
 
             {/* Card 9 */}
-            <div className="bg-white rounded-2xl shadow-md text-center p-8 hover:shadow-lg cursor-pointer hover:scale-105 transition">
-              <img src={Carriagejam} alt="Carriage is jammed" className="mx-auto mb-4 h-16" />
-              <p className="text-[#165DBA] font-medium">Carriage is jammed</p>
-            </div>
+            <Link to="/PrinterHelp/printer/carriage-jam">
+              <div className="bg-white rounded-2xl shadow-md text-center p-8 hover:shadow-lg cursor-pointer hover:scale-105 transition">
+                <img
+                  src={Carriagejam}
+                  alt="Carriage is jammed"
+                  className="mx-auto mb-4 h-16"
+                />
+                <p className="text-[#165DBA] font-medium">Carriage is jammed</p>
+              </div>
+            </Link>
 
             {/* Card 10 */}
-            <div className="bg-white rounded-2xl shadow-md text-center p-8 hover:shadow-lg cursor-pointer hover:scale-105 transition">
-              <img src={Faxissues} alt="Fax issues" className="mx-auto mb-4 h-16" />
-              <p className="text-[#165DBA] font-medium">Fax issues</p>
-            </div>
+            <Link to='/PrinterHelp/printer/fax-issues'>
+              <div className="bg-white rounded-2xl shadow-md text-center p-8 hover:shadow-lg cursor-pointer hover:scale-105 transition">
+                <img
+                  src={Faxissues}
+                  alt="Fax issues"
+                  className="mx-auto mb-4 h-16"
+                />
+                <p className="text-[#165DBA] font-medium">Fax issues</p>
+              </div>
+            </Link>
           </div>
         </div>
 
